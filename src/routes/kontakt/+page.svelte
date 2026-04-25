@@ -1,5 +1,7 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
+  import cms from '../../content/einstellungen/kontakt.json';
+  import allgemein from '../../content/einstellungen/allgemein.json';
   import seo from '../../content/einstellungen/seo.json';
 
   const seoSchema = {
@@ -24,12 +26,8 @@
     <div class="hero-grid">
       <div class="hero-text">
         <span class="label-caps hero-badge">Kontakt aufnehmen</span>
-        <h1>Lassen Sie uns gemeinsam etwas Besonderes schaffen.</h1>
-        <p class="hero-lead">
-          Ob Massmöbel, Küche oder Innenausbau – wir freuen uns auf Ihre Ideen
-          und beraten Sie gerne unverbindlich. Rufen Sie einfach an oder
-          schreiben Sie uns eine E-Mail.
-        </p>
+        <h1>{cms.heroTitel}</h1>
+        <p class="hero-lead">{cms.heroText}</p>
       </div>
       <div class="hero-bild">
         <img
@@ -101,9 +99,7 @@
       <div class="adresse-detail">
         <span class="material-symbols-outlined adresse-icon">location_on</span>
         <div>
-          <p class="adresse-text">Rheineckerstrasse 7</p>
-          <p class="adresse-text">9425 Thal SG</p>
-          <p class="adresse-text">Schweiz</p>
+          <p class="adresse-text">{allgemein.adresse}</p>
         </div>
       </div>
       <div class="adresse-detail">
