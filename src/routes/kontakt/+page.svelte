@@ -1,5 +1,6 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
+  import seo from '../../content/einstellungen/seo.json';
 
   const seoSchema = {
     "@context": "https://schema.org",
@@ -11,7 +12,7 @@
 </script>
 
 <SeoHead
-  title="Kontakt – Holzdesign Louis Thal SG"
+  title={seo.kontaktTitel}
   description="Nehmen Sie Kontakt mit Holzdesign Louis auf. Rufen Sie an oder schreiben Sie eine E-Mail – wir freuen uns auf Ihre Anfrage."
   canonical="/kontakt"
   schema={seoSchema}
