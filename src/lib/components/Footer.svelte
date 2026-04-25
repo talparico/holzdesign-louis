@@ -79,8 +79,6 @@
     gap: 0.75rem;
   }
 
-  .footer-logo-link { text-decoration: none; }
-
   .footer-logo {
     font-family: var(--font-serif);
     font-style: italic;
