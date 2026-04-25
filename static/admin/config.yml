@@ -61,6 +61,16 @@ collections:
           - { label: Region Titel, name: regionTitel, widget: string }
           - { label: Region Text, name: regionText, widget: text }
 
+      - label: Kontaktseite
+        name: kontakt
+        file: src/content/einstellungen/kontakt.json
+        fields:
+          - { label: Hero Titel, name: heroTitel, widget: string }
+          - { label: Hero Text, name: heroText, widget: text }
+          - { label: Öffnungszeiten Zeile 1, name: oeffnung1, widget: string, hint: "z.B. Montag – Freitag" }
+          - { label: Öffnungszeiten Zeile 2, name: oeffnung2, widget: string, hint: "z.B. 07:30 – 17:30 Uhr" }
+          - { label: Öffnungszeiten Zusatz, name: oeffnungZusatz, widget: string, hint: "z.B. Samstag nach Vereinbarung" }
+
       - label: Kontakt & Firma
         name: allgemein
         file: src/content/einstellungen/allgemein.json
