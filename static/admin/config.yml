@@ -71,6 +71,24 @@ collections:
           - { label: Adresse, name: adresse, widget: text }
           - { label: Instagram URL, name: instagram, widget: string, required: false }
 
+      - label: Über Holzdesign Louis
+        name: ueber-uns
+        file: src/content/einstellungen/ueber-uns.json
+        fields:
+          - { label: Hero Titel, name: heroTitel, widget: string }
+          - { label: Hero Text, name: heroText, widget: text }
+          - { label: Thomas Titel, name: thomasTitel, widget: string }
+          - { label: Thomas Text 1, name: thomasText1, widget: text }
+          - { label: Thomas Text 2, name: thomasText2, widget: text }
+          - { label: Thomas Text 3, name: thomasText3, widget: text }
+          - label: Meilensteine
+            name: meilensteine
+            widget: list
+            fields:
+              - { label: Jahr, name: jahr, widget: string }
+              - { label: Titel, name: titel, widget: string }
+              - { label: Text, name: text, widget: text }
+
       - label: SEO
         name: seo
         file: src/content/einstellungen/seo.json
