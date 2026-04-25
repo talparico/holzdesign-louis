@@ -17,7 +17,7 @@
     {
       title: 'Möbel',
       text: 'Einzigartige Möbelstücke, massgeschneidert auf Ihren Wohnraum und persönlichen Stil.',
-      href: '/portfolio/möbel',
+      href: '/referenzen#möbel',
       cta: 'Projekte ansehen',
       span: 2,
       imgAlt: 'Massgeschneidertes Möbelstück aus edlem Holz',
@@ -25,7 +25,7 @@
     {
       title: 'Küchen',
       text: 'Funktionale Eleganz für das Herz Ihres Zuhauses.',
-      href: '/portfolio/küchen',
+      href: '/referenzen#küchen',
       cta: 'Projekte ansehen',
       span: 1,
       imgAlt: 'Handgefertigte Holzküche mit modernem Design',
@@ -33,7 +33,7 @@
     {
       title: 'Türen / Fenster',
       text: 'Hochwertige Türen und Fenster nach Mass – präzise gefertigt.',
-      href: '/portfolio/türen-fenster',
+      href: '/referenzen#türen-fenster',
       cta: 'Projekte ansehen',
       span: 1,
       imgAlt: 'Massgeschneiderte Holztür mit traditionellen Beschlägen',
@@ -41,7 +41,7 @@
     {
       title: 'Allgemeiner Holzbau',
       text: 'Von der Treppe bis zur Raumgestaltung – Holzlösungen für jede Anforderung.',
-      href: '/portfolio/holzbau',
+      href: '/referenzen#holzbau',
       cta: 'Projekte ansehen',
       span: 1,
       imgAlt: 'Holztreppe und Innenausbau',
@@ -49,7 +49,7 @@
     {
       title: 'Gebäudehülle',
       text: 'Fassaden, Verkleidungen und Aussenverputz mit natürlichem Holz.',
-      href: '/portfolio/gebäudehülle',
+      href: '/referenzen#gebäudehülle',
       cta: 'Projekte ansehen',
       span: 1,
       imgAlt: 'Holzfassade und Gebäudeverkleidung',
@@ -57,7 +57,7 @@
     {
       title: 'Terrasse / Carport',
       text: 'Terrassen und Carports aus nachhaltigem Holz – für draussen gemacht.',
-      href: '/portfolio/terrasse-carport',
+      href: '/referenzen#terrasse-carport',
       cta: 'Projekte ansehen',
       span: 2,
       imgAlt: 'Holzterrasse mit Carport aus Naturholz',
@@ -96,7 +96,7 @@
         {homepage.heroText}
       </p>
       <div class="hero-ctas">
-        <a href="/portfolio" class="btn-gold">Portfolio ansehen</a>
+        <a href="/referenzen" class="btn-gold">Referenzen ansehen</a>
         <a href="/über-uns" class="btn-ghost-white">Unsere Geschichte</a>
       </div>
     </div>
@@ -225,7 +225,7 @@
     </div>
     <div class="region-map">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.5!2d9.5333!3d47.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1b1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sThal%2C%20St.%20Gallen!5e0!3m2!1sde!2sch!4v1620000000000!5m2!1sde!2sch&q=Thal+SG+Schweiz"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.5!2d9.5583!3d47.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1d0000000001%3A0x0!2sRheineckerstrasse+7%2C+9425+Thal!5e0!3m2!1sde!2sch!4v1620000000000!5m2!1sde!2sch"
         width="100%"
         height="100%"
         style="border:0; display:block;"
@@ -235,7 +235,7 @@
         title="Standort Holzdesign Louis, Thal SG"
       ></iframe>
       <a
-        href="https://maps.google.com/?q=Thal,+St.+Gallen,+Schweiz"
+        href="https://maps.google.com/?q=Rheineckerstrasse+7,+9425+Thal,+Schweiz"
         target="_blank"
         rel="noopener noreferrer"
         class="region-map-link"
@@ -261,9 +261,9 @@
         Sie Kontakt auf.
       </p>
       <div class="cta-buttons">
-        <a href="/portfolio" class="btn-primary">
-          Unsere Referenzen durchsuchen
-          <span class="material-symbols-outlined">collections</span>
+        <a href="/referenzen" class="btn-primary">
+          Zu unseren Referenzen
+          <span class="material-symbols-outlined">arrow_forward</span>
         </a>
         <a href="/kontakt" class="btn-secondary">Beratungstermin vereinbaren</a>
       </div>
