@@ -1,20 +1,17 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
+  import homepage from '../content/einstellungen/homepage.json';
+  import seo from '../content/einstellungen/seo.json';
 
   const seoSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Holzdesign Louis – Massgeschneiderte Schreinerei",
-    "description": "Holzdesign Louis fertigt einzigartige Massmöbel, Küchen und Innenausbauten. Erleben Sie traditionelles Handwerk mit moderner Designästhetik.",
+    "description": seo.metaDescription,
     "url": "https://www.holzdesign-louis.ch"
   };
 
-  const kennzahlen = [
-    { zahl: '15+', label: 'Jahre Meisterschaft' },
-    { zahl: '200+', label: 'Realisierte Projekte' },
-    { zahl: '100%', label: 'Schweizer Handwerk' },
-
-  ];
+  const kennzahlen = homepage.kennzahlen;
 
   const leistungen = [
     {
@@ -93,11 +90,10 @@
 
   <div class="container hero-content">
     <div class="hero-box">
-      <span class="label-caps hero-badge">Traditionelles Handwerk</span>
-      <h1 class="hero-h1">Wo Präzision auf<br />Natur trifft</h1>
+      <span class="label-caps hero-badge">{homepage.heroBadge}</span>
+      <h1 class="hero-h1">{@html homepage.heroTitel.replace(" auf", "<br />auf")}</h1>
       <p class="hero-lead">
-        Massgeschneiderte Holzarbeiten für gehobene Wohnräume. Wir verwandeln edelstes Holz
-        in zeitlose Möbel und Innenausbauten – mit Leidenschaft und Schweizer Präzision.
+        {homepage.heroText}
       </p>
       <div class="hero-ctas">
         <a href="/portfolio" class="btn-gold">Portfolio ansehen</a>
@@ -131,19 +127,13 @@
   <div class="philosophie-grid">
     <div class="philosophie-text">
       <span class="label-caps philosophie-badge">Unsere Philosophie</span>
-      <h2>Handwerkliche Holzkunst als lebenslange Leidenschaft</h2>
+      <h2>{homepage.philosophieTitel}</h2>
       <div class="philosophie-body">
         <p>
-          Holz hat eine Seele – und einen Herzschlag. Jede Maserung erzählt eine Geschichte
-          von Widerstandskraft, Wärme und Schönheit. Bei Holzdesign Louis ist es unsere
-          Leidenschaft, diese Geschichte durch sorgfältiges Handwerk und zeitgemässe
-          Designästhetik zum Leben zu erwecken.
+          {homepage.philosophieText1}
         </p>
         <p>
-          Unsere Werkstatt verbindet jahrhundertealte Techniken mit modernster Präzision.
-          Wir verarbeiten nur nachhaltige und hochwertige Hölzer – damit jedes Stück,
-          das wir schaffen, nicht einfach ein Möbelstück ist, sondern ein Vermächtnis,
-          das Generationen überdauert.
+          {homepage.philosophieText2}
         </p>
 
       </div>
@@ -232,12 +222,9 @@
   <div class="container region-inner">
     <div class="region-text-wrap">
       <span class="label-caps region-badge">Unser Standort</span>
-      <h2 class="region-h2">Verwurzelt in Thal SG –<br>unterwegs in der ganzen Schweiz</h2>
+      <h2 class="region-h2">{homepage.regionTitel}</h2>
       <p class="region-p">
-        Unsere Werkstatt liegt in Thal im Kanton St. Gallen, mitten im Herzen der Ostschweiz.
-        Von hier aus realisieren wir Projekte in der gesamten Schweiz – ob Zürich, Basel,
-        Bern oder Graubünden. Kurze Wege, persönlicher Kontakt und Schweizer Qualität,
-        die man anfassen kann.
+        {homepage.regionText}
       </p>
       <div class="region-pills">
         <span class="region-pill"><span class="material-symbols-outlined">location_on</span> Thal SG</span>
