@@ -63,8 +63,6 @@
     <nav class="nav-desktop" aria-label="Hauptnavigation">
       <a href="/" class="nav-link" class:nav-link--active={isActive('/')}>Home</a>
 
-      <a href="/ueber-uns" class="nav-link" class:nav-link--active={isActive('/ueber-uns')}>Über uns</a>
-
       <!-- Leistungen Dropdown -->
       <div class="nav-dropdown-wrap">
         <button
@@ -98,6 +96,8 @@
       </div>
 
       <a href="/kontakt" class="nav-link" class:nav-link--active={isActive('/kontakt')}>Kontakt</a>
+
+      <a href="/ueber-uns" class="nav-link" class:nav-link--active={isActive('/ueber-uns')}>Über uns</a>
     </nav>
 
     <!-- CTA + Hamburger -->
@@ -118,7 +118,6 @@
   {#if mobileOpen}
     <nav class="nav-mobile" aria-label="Mobile Navigation">
       <a href="/" class="nav-mobile-link" on:click={closeAll}>Home</a>
-      <a href="/ueber-uns" class="nav-mobile-link" on:click={closeAll}>Über uns</a>
       <div class="nav-mobile-group">
         <button
           class="nav-mobile-link nav-mobile-parent"
@@ -137,6 +136,7 @@
         {/if}
       </div>
       <a href="/kontakt" class="nav-mobile-link" on:click={closeAll}>Kontakt</a>
+      <a href="/ueber-uns" class="nav-mobile-link" on:click={closeAll}>Über uns</a>
       <a href="/kontakt" class="btn-gold nav-mobile-cta" on:click={closeAll}>Kontakt aufnehmen</a>
     </nav>
   {/if}
