@@ -97,7 +97,7 @@
       </p>
       <div class="hero-ctas">
         <a href="/referenzen" class="btn-gold">Referenzen ansehen</a>
-        <a href="/über-uns" class="btn-ghost-white">Unsere Geschichte</a>
+        <a href="/ueber-uns" class="btn-ghost-white">Über Holzdesign Louis</a>
       </div>
     </div>
   </div>
