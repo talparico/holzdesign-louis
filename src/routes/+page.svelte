@@ -434,8 +434,7 @@
     position: relative;
   }
 
-  .philosophie-bild,
-  .philosophie-portrait {
+  .philosophie-bild {
     position: relative;
     aspect-ratio: 3/4;
     background: var(--color-surface-container-high);
