@@ -771,4 +771,147 @@
     .hero { height: auto; min-height: 600px; padding: 4rem 0; }
     .hero-box { padding: 2rem; }
   }
+
+  /* ═══════════════════════════════
+     RESPONSIVE – MOBILE FIRST
+  ═══════════════════════════════ */
+
+  /* Tablet (max 1024px) */
+  @media (max-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-wide {
+      grid-column: span 2;
+    }
+    .bento-card {
+      height: 320px;
+    }
+    .region-inner {
+      gap: 3rem;
+    }
+    .cta-box {
+      padding: 3rem 2rem;
+    }
+  }
+
+  /* Mobile (max 768px) */
+  @media (max-width: 768px) {
+    /* Hero */
+    .hero {
+      height: auto;
+      min-height: 100svh;
+      padding: 6rem 0 3rem;
+    }
+    .hero-box {
+      padding: 1.75rem;
+      margin: 0;
+      max-width: 100%;
+      background: rgba(0,0,0,0.35);
+    }
+    .hero-h1 {
+      font-size: 2.25rem;
+    }
+    .hero-lead {
+      font-size: 1rem;
+    }
+    .hero-ctas {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .hero-ctas a {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* KPI */
+    .kpi-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .kpi-tile {
+      padding: 1.25rem 0.75rem;
+    }
+    .kpi-zahl {
+      font-size: 1.75rem;
+    }
+
+    /* Philosophie */
+    .philosophie-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .philosophie-deko {
+      display: none;
+    }
+    .philosophie-autor {
+      margin-top: 2rem;
+    }
+
+    /* Leistungen */
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+    .bento-wide {
+      grid-column: span 1;
+    }
+    .bento-card {
+      height: 280px;
+    }
+    .leistungen-header h2 {
+      font-size: 1.75rem;
+    }
+
+    /* Region */
+    .region-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .region-h2 {
+      font-size: 1.75rem;
+    }
+    .region-map {
+      aspect-ratio: 3/2;
+    }
+
+    /* CTA */
+    .cta-box {
+      padding: 2rem 1.25rem;
+    }
+    .cta-h2 {
+      font-size: 1.75rem;
+    }
+    .cta-text {
+      font-size: 1rem;
+    }
+    .cta-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    .cta-buttons a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  /* Kleines Mobile (max 480px) */
+  @media (max-width: 480px) {
+    .kpi-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    .kpi-zahl {
+      font-size: 1.5rem;
+    }
+    .kpi-label {
+      font-size: 9px;
+    }
+    .hero-h1 {
+      font-size: 1.875rem;
+    }
+    .region-pills {
+      flex-direction: column;
+    }
+  }
+
 </style>
