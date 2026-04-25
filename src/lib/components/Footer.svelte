@@ -24,7 +24,7 @@
       <a href="/datenschutz" class="footer-link">Datenschutz</a>
       <a href="/kontakt" class="footer-link">Kontakt</a>
       <a
-        href="#"
+        href="https://www.linkedin.com"
         class="footer-link"
         target="_blank"
         rel="noopener noreferrer"
