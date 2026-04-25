@@ -162,7 +162,7 @@
             style="transform: translateX({-idx * CARD_W}px)"
           >
             {#each katProjekte as projekt}
-              <article class="projekt-card" on:click={() => openLightbox(projekt, 0)}>
+              <div class="projekt-card" on:click={() => openLightbox(projekt, 0)} on:keydown={(e) => e.key === "Enter" && openLightbox(projekt, 0)} role="button" tabindex="0">
                 <div class="projekt-img-wrap">
                   {#if projekt.bilder && projekt.bilder.length > 0}
                     <img
@@ -185,7 +185,7 @@
                 </div>
                 <h3 class="projekt-titel">{projekt.title}</h3>
                 <p class="projekt-text">{projekt.description}</p>
-              </article>
+              </div>
             {/each}
           </div>
         </div>
@@ -218,13 +218,14 @@
   <div
     class="lightbox"
     on:click={closeLightbox}
+    on:keydown={(e) => e.key === "Escape" && closeLightbox()}
     role="dialog"
     aria-modal="true"
   >
     <button class="lb-close" on:click={closeLightbox}>
       <span class="material-symbols-outlined">close</span>
     </button>
-    <div class="lb-inner" on:click|stopPropagation={() => {}}>
+    <div class="lb-inner" on:click|stopPropagation={() => {}} on:keydown={() => {}} role="presentation">
       <img
         src={lightbox.bilder[lbBildIndex].bild}
         alt={lightbox.bilder[lbBildIndex].alt}
