@@ -265,7 +265,7 @@
           Zu unseren Referenzen
           <span class="material-symbols-outlined">arrow_forward</span>
         </a>
-        <a href="/kontakt" class="btn-secondary">Beratungstermin vereinbaren</a>
+        <a href="/kontakt" class="btn-secondary">Kontakt aufnehmen</a>
       </div>
     </div>
   </div>
