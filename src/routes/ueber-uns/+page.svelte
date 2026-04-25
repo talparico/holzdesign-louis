@@ -1,7 +1,9 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
+  import cms from '../../content/einstellungen/ueber-uns.json';
 
-  const meilensteine = [
+  $: meilensteine = cms.meilensteine;
+  const _unused = [
     {
       jahr: '2010',
       titel: 'Die Leidenschaft beginnt',
@@ -49,12 +51,8 @@
     <div class="hero-grid">
       <div class="hero-text">
         <span class="label-caps hero-badge">Über Holzdesign Louis</span>
-        <h1>Holz hat eine Seele – und einen Herzschlag.</h1>
-        <p class="hero-lead">
-          Holzdesign Louis ist mehr als eine Schreinerei. Es ist eine Leidenschaft,
-          die Thomas Louis seit über 15 Jahren lebt – mit Herzblut, Präzision und
-          tiefem Respekt vor dem Werkstoff Holz.
-        </p>
+        <h1>{cms.heroTitel}</h1>
+<p class="hero-lead">{cms.heroText}</p>
         <a href="/kontakt" class="btn-primary">
           Kontakt aufnehmen
           <span class="material-symbols-outlined">arrow_forward</span>
@@ -82,10 +80,10 @@
   <div class="thomas-grid">
     <div class="thomas-text">
       <span class="label-caps section-badge">Der Mensch dahinter</span>
-      <h2>Thomas Louis –<br/>Schreinermeister & Gründer</h2>
-      <p>Aufgewachsen in der Ostschweiz war Holz schon immer mehr als nur ein Werkstoff für Thomas Louis. Als Kind verbrachte er Stunden in der Werkstatt seines Grossvaters und lernte früh, dass gutes Handwerk Geduld, Hingabe und ein Gespür für das Material braucht.</p>
-      <p>Nach der Ausbildung und der Meisterprüfung gründete er Holzdesign Louis mit einer klaren Vision: Möbel und Innenausbauten schaffen, die Generationen überdauern – massgeschneidert, nachhaltig und mit einem Hauch Magie.</p>
-      <p>Heute führt er seine Werkstatt in Thal SG und realisiert Projekte in der gesamten Schweiz. Jedes Projekt ist für ihn persönlich – vom ersten Gespräch bis zur Montage.</p>
+      <h2>{@html cms.thomasTitel.replace(" –", "<br/>–")}</h2>
+      <p>{cms.thomasText1}</p>
+      <p>{cms.thomasText2}</p>
+      <p>{cms.thomasText3}</p>
     </div>
     <div class="kenn-grid">
       <div class="kenn-tile">
