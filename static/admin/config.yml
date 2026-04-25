@@ -79,7 +79,7 @@ collections:
           - { label: Telefon, name: telefon, widget: string }
           - { label: E-Mail, name: email, widget: string }
           - { label: Adresse, name: adresse, widget: text }
-          - { label: Instagram URL, name: instagram, widget: string, required: false }
+          - { label: LinkedIn URL, name: linkedin, widget: string, required: false, hint: "z.B. https://www.linkedin.com/company/holzdesign-louis" }
 
       - label: Über Holzdesign Louis
         name: ueber-uns
