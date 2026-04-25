@@ -76,7 +76,7 @@
 
     <!-- LinkedIn -->
     <a
-      href="#"
+      href="https://www.linkedin.com"
       target="_blank"
       rel="noopener noreferrer"
       class="kontakt-card"
