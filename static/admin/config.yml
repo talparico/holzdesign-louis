@@ -75,5 +75,9 @@ collections:
         name: seo
         file: src/content/einstellungen/seo.json
         fields:
-          - { label: SEO Titel Homepage, name: seoTitel, widget: string, hint: "50-65 Zeichen" }
-          - { label: Meta Description, name: metaDescription, widget: text, hint: "145-160 Zeichen" }
+          - { label: "Homepage – SEO Titel", name: seoTitel, widget: string, hint: "50-65 Zeichen" }
+          - { label: "Homepage – Meta Description", name: metaDescription, widget: text, hint: "145-160 Zeichen" }
+          - { label: "Kontakt – SEO Titel", name: kontaktTitel, widget: string, hint: "50-65 Zeichen" }
+          - { label: "Kontakt – Meta Description", name: kontaktDescription, widget: text, hint: "145-160 Zeichen" }
+          - { label: "Referenzen – SEO Titel", name: referenzenTitel, widget: string, hint: "50-65 Zeichen" }
+          - { label: "Referenzen – Meta Description", name: referenzenDescription, widget: text, hint: "145-160 Zeichen" }
