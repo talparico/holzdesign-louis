@@ -153,6 +153,8 @@
   @media (max-width: 768px) {
     .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
     .hero-bild { aspect-ratio: 16/9; }
+    .hero-text { text-align: center; }
+    .hero-badge { text-align: center; }
   }
 
   /* KONTAKT CARDS */
@@ -166,6 +168,12 @@
 
   @media (max-width: 768px) {
     .cards-grid { grid-template-columns: 1fr; }
+    .kontakt-card { justify-content: center; text-align: center; flex-direction: column; align-items: center; }
+    .card-arrow { display: none; }
+    .standort-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .adresse-wrap { text-align: center; }
+    .adresse-detail { justify-content: center; }
+    .btn-directions { margin: 1rem auto 0; display: flex; width: fit-content; }
   }
 
   .kontakt-card {
