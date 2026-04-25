@@ -81,6 +81,13 @@ collections:
           - { label: Thomas Text 1, name: thomasText1, widget: text }
           - { label: Thomas Text 2, name: thomasText2, widget: text }
           - { label: Thomas Text 3, name: thomasText3, widget: text }
+          - label: Werte-Kacheln
+            name: werte
+            widget: list
+            fields:
+              - { label: Icon (Material Icon Name), name: icon, widget: string, hint: "z.B. favorite, handshake, nature" }
+              - { label: Titel, name: titel, widget: string }
+              - { label: Text, name: text, widget: text }
           - label: Meilensteine
             name: meilensteine
             widget: list
