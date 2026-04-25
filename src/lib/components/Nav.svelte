@@ -5,15 +5,15 @@
   let leistungenOpen = false;
 
   const leistungen = [
-    { href: '/portfolio/möbel', label: 'Möbel' },
-    { href: '/portfolio/küchen', label: 'Küchen' },
-    { href: '/portfolio/türen-fenster', label: 'Türen / Fenster' },
-    { href: '/portfolio/holzbau', label: 'Allgemeiner Holzbau' },
-    { href: '/portfolio/gebäudehülle', label: 'Gebäudehülle' },
-    { href: '/portfolio/terrasse-carport', label: 'Terrasse / Carport' },
+    { href: '/referenzen#möbel', label: 'Möbel' },
+    { href: '/referenzen#küchen', label: 'Küchen' },
+    { href: '/referenzen#türen-fenster', label: 'Türen / Fenster' },
+    { href: '/referenzen#holzbau', label: 'Allgemeiner Holzbau' },
+    { href: '/referenzen#gebäudehülle', label: 'Gebäudehülle' },
+    { href: '/referenzen#terrasse-carport', label: 'Terrasse / Carport' },
   ];
 
-  function toggleLeistungen() {
+  function toggleReferenzen() {
     leistungenOpen = !leistungenOpen;
   }
 
@@ -95,7 +95,7 @@
         {/if}
       </div>
 
-      <a href="/portfolio" class="nav-link" class:nav-link--active={isActive('/portfolio')}>Portfolio</a>
+      <a href="/referenzen" class="nav-link" class:nav-link--active={isActive('/referenzen')}>Referenzen</a>
       <a href="/blog" class="nav-link" class:nav-link--active={isActive('/blog')}>Blog</a>
       <a href="/kontakt" class="nav-link" class:nav-link--active={isActive('/kontakt')}>Kontakt</a>
     </nav>
@@ -135,7 +135,7 @@
           {/each}
         {/if}
       </div>
-      <a href="/portfolio" class="nav-mobile-link" on:click={closeAll}>Portfolio</a>
+      <a href="/referenzen" class="nav-mobile-link" on:click={closeAll}>Referenzen</a>
       <a href="/blog" class="nav-mobile-link" on:click={closeAll}>Blog</a>
       <a href="/kontakt" class="nav-mobile-link" on:click={closeAll}>Kontakt</a>
       <a href="/kontakt" class="btn-gold nav-mobile-cta" on:click={closeAll}>Kontakt aufnehmen</a>
@@ -360,5 +360,13 @@
     text-align: center;
     justify-content: center;
     text-decoration: none;
+  }
+</style>
+<style>
+  /* Zusätzliche Mobile-Fixes für Nav */
+  @media (max-width: 400px) {
+    .nav-logo-text {
+      font-size: 1rem;
+    }
   }
 </style>
