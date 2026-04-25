@@ -5,6 +5,12 @@
   "thomasText1": "Aufgewachsen in der Ostschweiz war Holz schon immer mehr als nur ein Werkstoff für Thomas Louis. Als Kind verbrachte er Stunden in der Werkstatt seines Grossvaters und lernte früh, dass gutes Handwerk Geduld, Hingabe und ein Gespür für das Material braucht.",
   "thomasText2": "Nach der Ausbildung und der Meisterprüfung gründete er Holzdesign Louis mit einer klaren Vision: Möbel und Innenausbauten schaffen, die Generationen überdauern – massgeschneidert, nachhaltig und mit einem Hauch Magie.",
   "thomasText3": "Heute führt er seine Werkstatt in Thal SG und realisiert Projekte in der gesamten Schweiz. Jedes Projekt ist für ihn persönlich – vom ersten Gespräch bis zur Montage.",
+  "werte": [
+    { "icon": "favorite",                "titel": "Leidenschaft",   "text": "Jedes Projekt ist Ausdruck unserer Begeisterung für den Werkstoff Holz." },
+    { "icon": "precision_manufacturing", "titel": "Präzision",      "text": "Schweizer Qualität bedeutet für uns: kein Kompromiss. Jeder Millimeter zählt." },
+    { "icon": "nature",                  "titel": "Nachhaltigkeit", "text": "Wir verarbeiten nur nachhaltig geerntetes Holz aus kontrollierten Quellen." },
+    { "icon": "handshake",               "titel": "Vertrauen",      "text": "Ehrliche Beratung, transparente Preise und zuverlässige Ausführung." }
+  ],
   "meilensteine": [
     { "jahr": "2010", "titel": "Die Leidenschaft beginnt", "text": "Thomas Louis schliesst seine Ausbildung als Schreiner ab und beginnt seine ersten eigenen Projekte." },
     { "jahr": "2015", "titel": "Meisterprüfung bestanden", "text": "Nach intensiver Weiterbildung legt Thomas die Schreinermeisterprüfung ab." },
