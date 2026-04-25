@@ -42,6 +42,25 @@ collections:
   - name: einstellungen
     label: Einstellungen
     files:
+      - label: Homepage
+        name: homepage
+        file: src/content/einstellungen/homepage.json
+        fields:
+          - { label: Hero Badge, name: heroBadge, widget: string, default: "Traditionelles Handwerk" }
+          - { label: Hero Titel, name: heroTitel, widget: string, default: "Wo Präzision auf Natur trifft" }
+          - { label: Hero Text, name: heroText, widget: text, default: "Massgeschneiderte Holzarbeiten für gehobene Wohnräume." }
+          - label: Kennzahlen
+            name: kennzahlen
+            widget: list
+            fields:
+              - { label: Zahl, name: zahl, widget: string }
+              - { label: Beschriftung, name: label, widget: string }
+          - { label: Philosophie Titel, name: philosophieTitel, widget: string }
+          - { label: Philosophie Text 1, name: philosophieText1, widget: text }
+          - { label: Philosophie Text 2, name: philosophieText2, widget: text }
+          - { label: Region Titel, name: regionTitel, widget: string }
+          - { label: Region Text, name: regionText, widget: text }
+
       - label: Kontakt & Firma
         name: allgemein
         file: src/content/einstellungen/allgemein.json
@@ -51,3 +70,10 @@ collections:
           - { label: E-Mail, name: email, widget: string }
           - { label: Adresse, name: adresse, widget: text }
           - { label: Instagram URL, name: instagram, widget: string, required: false }
+
+      - label: SEO
+        name: seo
+        file: src/content/einstellungen/seo.json
+        fields:
+          - { label: SEO Titel Homepage, name: seoTitel, widget: string, hint: "50-65 Zeichen" }
+          - { label: Meta Description, name: metaDescription, widget: text, hint: "145-160 Zeichen" }
