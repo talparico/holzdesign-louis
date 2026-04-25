@@ -56,7 +56,6 @@
                 padding 0.35s ease;
     white-space: nowrap;
     border-left: 3px solid rgba(255,255,255,0.15);
-    position: relative;
   }
 
   .kontakt-btn:first-child {
@@ -95,36 +94,44 @@
     opacity: 1;
   }
 
-  /* Auf sehr kleinen Bildschirmen nach unten verschieben */
-  @media (max-width: 480px) {
+  /* Mobile – bleibt rechts fixiert */
+  @media (max-width: 768px) {
     .kontakt-leiste {
-      top: auto;
-      bottom: 1.5rem;
-      transform: none;
-      flex-direction: row;
-      right: 1rem;
-      gap: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      flex-direction: column;
+      gap: 0;
     }
 
     .kontakt-btn {
-      border-radius: 50% !important;
-      border: none !important;
-      width: 48px;
-      height: 48px;
-      max-width: 48px !important;
-      padding: 0 !important;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 44px !important;
+      width: 44px;
+      padding: 0.75rem 0.625rem !important;
+      border-radius: 0 !important;
+      gap: 0 !important;
+    }
+
+    .kontakt-btn:first-child {
+      border-radius: 0.375rem 0 0 0 !important;
+    }
+
+    .kontakt-btn:last-child {
+      border-radius: 0 0 0 0.375rem !important;
     }
 
     .kontakt-btn:hover {
-      max-width: 48px !important;
-      padding: 0 !important;
-      gap: 0 !important;
+      max-width: 44px !important;
+      padding: 0.75rem 0.625rem !important;
+      background: #b08d4a;
     }
 
     .kontakt-label {
       display: none;
+    }
+
+    .kontakt-icon {
+      font-size: 20px !important;
     }
   }
 </style>
