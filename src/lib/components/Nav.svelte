@@ -365,12 +365,5 @@
     justify-content: center;
     text-decoration: none;
   }
-</style>
-<style>
-  /* Zusätzliche Mobile-Fixes für Nav */
-  @media (max-width: 400px) {
-    .nav-logo-text {
-      font-size: 1rem;
-    }
-  }
+
 </style>
