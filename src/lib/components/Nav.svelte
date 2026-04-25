@@ -95,7 +95,6 @@
         {/if}
       </div>
 
-      <a href="/referenzen" class="nav-link" class:nav-link--active={isActive('/referenzen')}>Referenzen</a>
       <a href="/kontakt" class="nav-link" class:nav-link--active={isActive('/kontakt')}>Kontakt</a>
     </nav>
 
@@ -134,7 +133,6 @@
           {/each}
         {/if}
       </div>
-      <a href="/referenzen" class="nav-mobile-link" on:click={closeAll}>Referenzen</a>
       <a href="/kontakt" class="nav-mobile-link" on:click={closeAll}>Kontakt</a>
       <a href="/kontakt" class="btn-gold nav-mobile-cta" on:click={closeAll}>Kontakt aufnehmen</a>
     </nav>
