@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: talparico/holzdesign-louis
+  name: git-gateway
   branch: main
 
 media_folder: static/uploads
@@ -31,15 +30,14 @@ collections:
         name: bilder
         widget: list
         label_singular: Bild
-        summary: "{{fields.alt}}"
         minimize_collapsed: true
         fields:
           - { label: Bild hochladen, name: bild, widget: image }
-          - { label: Bildbeschreibung, name: alt, widget: string, hint: "Was ist auf dem Bild zu sehen?" }
-      - { label: Kurzbeschreibung, name: description, widget: text, hint: "1–2 Sätze – erscheint in der Projektübersicht" }
-      - { label: Detailtext (optional), name: body, widget: markdown, required: false, hint: "Mehr Details zum Projekt" }
+          - { label: Bildbeschreibung, name: alt, widget: string }
+      - { label: Kurzbeschreibung, name: description, widget: text }
+      - { label: Detailtext (optional), name: body, widget: markdown, required: false }
       - { label: Jahr, name: jahr, widget: number, default: 2026 }
-      - { label: Auf Startseite hervorheben, name: featured, widget: boolean, default: false, hint: "Dieses Projekt auf der Homepage anzeigen?" }
+      - { label: Auf Startseite hervorheben, name: featured, widget: boolean, default: false }
 
   - name: einstellungen
     label: Einstellungen
@@ -49,7 +47,7 @@ collections:
         file: src/content/einstellungen/allgemein.json
         fields:
           - { label: Firmenname, name: firmenname, widget: string }
-          - { label: Telefon, name: telefon, widget: string, hint: "+41 79 554 40 30" }
+          - { label: Telefon, name: telefon, widget: string }
           - { label: E-Mail, name: email, widget: string }
           - { label: Adresse, name: adresse, widget: text }
           - { label: Instagram URL, name: instagram, widget: string, required: false }
