@@ -215,12 +215,10 @@
 
 <!-- LIGHTBOX -->
 {#if lightbox}
-  <div
+  <button
     class="lightbox"
     on:click={closeLightbox}
-    on:keydown={(e) => e.key === "Escape" && closeLightbox()}
-    role="dialog"
-    aria-modal="true"
+    aria-label="Lightbox schliessen"
   >
     <button class="lb-close" on:click={closeLightbox}>
       <span class="material-symbols-outlined">close</span>
@@ -244,7 +242,7 @@
         <p class="lb-titel">{lightbox.title}</p>
       </div>
     </div>
-  </div>
+  </button>
 {/if}
 
 <!-- CTA -->
