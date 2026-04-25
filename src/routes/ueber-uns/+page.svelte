@@ -1,9 +1,16 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
-  import cms from '../../content/einstellungen/ueber-uns.json';
 
-  $: meilensteine = cms.meilensteine;
-  const _unused = [
+  const cms = {
+    heroTitel: "Holz hat eine Seele – und einen Herzschlag.",
+    heroText: "Holzdesign Louis ist mehr als eine Schreinerei. Es ist eine Leidenschaft, die Thomas Louis seit über 15 Jahren lebt – mit Herzblut, Präzision und tiefem Respekt vor dem Werkstoff Holz.",
+    thomasTitel: "Thomas Louis – Schreinermeister & Gründer",
+    thomasText1: "Aufgewachsen in der Ostschweiz war Holz schon immer mehr als nur ein Werkstoff für Thomas Louis. Als Kind verbrachte er Stunden in der Werkstatt seines Grossvaters und lernte früh, dass gutes Handwerk Geduld, Hingabe und ein Gespür für das Material braucht.",
+    thomasText2: "Nach der Ausbildung und der Meisterprüfung gründete er Holzdesign Louis mit einer klaren Vision: Möbel und Innenausbauten schaffen, die Generationen überdauern – massgeschneidert, nachhaltig und mit einem Hauch Magie.",
+    thomasText3: "Heute führt er seine Werkstatt in Thal SG und realisiert Projekte in der gesamten Schweiz. Jedes Projekt ist für ihn persönlich – vom ersten Gespräch bis zur Montage."
+  };
+
+  const meilensteine = [
     {
       jahr: '2010',
       titel: 'Die Leidenschaft beginnt',
