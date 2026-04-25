@@ -184,6 +184,12 @@
     white-space: nowrap;
   }
 
+  @media (max-width: 480px) {
+    .nav-logo-img { height: 30px; }
+    .nav-logo-text { font-size: 0.9rem; }
+    .nav-logo { gap: 0.4rem; }
+  }
+
   .nav-desktop {
     display: none;
     align-items: center;
