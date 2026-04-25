@@ -390,5 +390,11 @@
     .lb-prev { left: -1rem; }
     .lb-next { right: -1rem; }
     .cta-box { padding: 2rem 1.25rem; }
+    .ref-hero { text-align: center; }
+    .ref-badge { text-align: center; }
+    .ref-lead { text-align: center; }
+    .anker-inner { justify-content: center; }
+    .kat-header { flex-direction: column; align-items: center; text-align: center; }
+    .kat-beschreibung { text-align: center; max-width: 100%; }
   }
 </style>
