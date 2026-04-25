@@ -3,6 +3,12 @@
 
   const cms = {
     heroTitel: "Holz hat eine Seele – und einen Herzschlag.",
+    werte: [
+      { icon: 'favorite',                titel: 'Leidenschaft',    text: 'Jedes Projekt ist Ausdruck unserer Begeisterung für den Werkstoff Holz.' },
+      { icon: 'precision_manufacturing', titel: 'Präzision',       text: 'Schweizer Qualität bedeutet für uns: kein Kompromiss. Jeder Millimeter zählt.' },
+      { icon: 'nature',                  titel: 'Nachhaltigkeit',  text: 'Wir verarbeiten nur nachhaltig geerntetes Holz aus kontrollierten Quellen.' },
+      { icon: 'handshake',               titel: 'Vertrauen',       text: 'Ehrliche Beratung, transparente Preise und zuverlässige Ausführung.' },
+    ],
     heroText: "Holzdesign Louis ist mehr als eine Schreinerei. Es ist eine Leidenschaft, die Thomas Louis seit über 15 Jahren lebt – mit Herzblut, Präzision und tiefem Respekt vor dem Werkstoff Holz.",
     thomasTitel: "Thomas Louis – Schreinermeister & Gründer",
     thomasText1: "Aufgewachsen in der Ostschweiz war Holz schon immer mehr als nur ein Werkstoff für Thomas Louis. Als Kind verbrachte er Stunden in der Werkstatt seines Grossvaters und lernte früh, dass gutes Handwerk Geduld, Hingabe und ein Gespür für das Material braucht.",
@@ -38,7 +44,7 @@
     },
   ];
 
-  const werte = [
+  const werte = cms.werte || [
     { icon: 'favorite',                 titel: 'Leidenschaft',    text: 'Jedes Projekt ist Ausdruck unserer Begeisterung für den Werkstoff Holz.' },
     { icon: 'precision_manufacturing',  titel: 'Präzision',       text: 'Schweizer Qualität bedeutet für uns: kein Kompromiss. Jeder Millimeter zählt.' },
     { icon: 'nature',                   titel: 'Nachhaltigkeit',  text: 'Wir verarbeiten nur nachhaltig geerntetes Holz aus kontrollierten Quellen.' },
