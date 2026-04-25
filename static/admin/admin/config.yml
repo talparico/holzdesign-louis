@@ -1,0 +1,55 @@
+backend:
+  name: github
+  repo: talparico/holzdesign-louis
+  branch: main
+
+media_folder: static/uploads
+public_folder: /uploads
+
+locale: de
+
+collections:
+  - name: projekte
+    label: Projekte
+    folder: src/content/projekte
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} – {{kategorie}}"
+    fields:
+      - { label: Projekttitel, name: title, widget: string, hint: "z.B. Eichenschrank Familie Müller" }
+      - label: Kategorie
+        name: kategorie
+        widget: select
+        options:
+          - { label: "Möbel", value: "möbel" }
+          - { label: "Küchen", value: "küchen" }
+          - { label: "Türen / Fenster", value: "türen-fenster" }
+          - { label: "Allgemeiner Holzbau", value: "holzbau" }
+          - { label: "Gebäudehülle", value: "gebäudehülle" }
+          - { label: "Terrasse / Carport", value: "terrasse-carport" }
+      - label: Bilder
+        name: bilder
+        widget: list
+        label_singular: Bild
+        summary: "{{fields.alt}}"
+        minimize_collapsed: true
+        fields:
+          - { label: Bild hochladen, name: bild, widget: image }
+          - { label: Bildbeschreibung, name: alt, widget: string, hint: "Was ist auf dem Bild zu sehen?" }
+      - { label: Kurzbeschreibung, name: description, widget: text, hint: "1–2 Sätze – erscheint in der Projektübersicht" }
+      - { label: Detailtext (optional), name: body, widget: markdown, required: false, hint: "Mehr Details zum Projekt" }
+      - { label: Jahr, name: jahr, widget: number, default: 2026 }
+      - { label: Auf Startseite hervorheben, name: featured, widget: boolean, default: false, hint: "Dieses Projekt auf der Homepage anzeigen?" }
+
+  - name: einstellungen
+    label: Einstellungen
+    files:
+      - label: Kontakt & Firma
+        name: allgemein
+        file: src/content/einstellungen/allgemein.json
+        fields:
+          - { label: Firmenname, name: firmenname, widget: string }
+          - { label: Telefon, name: telefon, widget: string, hint: "+41 79 554 40 30" }
+          - { label: E-Mail, name: email, widget: string }
+          - { label: Adresse, name: adresse, widget: text }
+          - { label: Instagram URL, name: instagram, widget: string, required: false }
