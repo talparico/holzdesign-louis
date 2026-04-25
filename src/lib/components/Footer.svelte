@@ -21,6 +21,7 @@
 
     <!-- LINKS -->
     <nav class="footer-links" aria-label="Footer Navigation">
+      <a href="/impressum" class="footer-link">Impressum</a>
       <a href="/datenschutz" class="footer-link">Datenschutz</a>
       <a href="/kontakt" class="footer-link">Kontakt</a>
       <a
@@ -77,6 +78,8 @@
     flex-direction: column;
     gap: 0.75rem;
   }
+
+  .footer-logo-link { text-decoration: none; }
 
   .footer-logo {
     font-family: var(--font-serif);
