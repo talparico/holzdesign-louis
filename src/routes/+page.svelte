@@ -246,19 +246,25 @@
       </div>
     </div>
     <div class="region-map">
-      <div class="region-map-inner">
-        <span class="material-symbols-outlined region-map-icon">map</span>
-        <p class="region-map-label">Thal, Kanton St. Gallen</p>
-        <a
-          href="https://maps.google.com/?q=Thal,+St.+Gallen,+Schweiz"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-gold region-map-btn"
-        >
-          Auf Google Maps öffnen
-          <span class="material-symbols-outlined">open_in_new</span>
-        </a>
-      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.5!2d9.5333!3d47.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1b1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sThal%2C%20St.%20Gallen!5e0!3m2!1sde!2sch!4v1620000000000!5m2!1sde!2sch&q=Thal+SG+Schweiz"
+        width="100%"
+        height="100%"
+        style="border:0; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Standort Holzdesign Louis, Thal SG"
+      ></iframe>
+      <a
+        href="https://maps.google.com/?q=Thal,+St.+Gallen,+Schweiz"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="region-map-link"
+      >
+        <span class="material-symbols-outlined">open_in_new</span>
+        Auf Google Maps öffnen
+      </a>
     </div>
   </div>
 </section>
@@ -682,39 +688,45 @@
     aspect-ratio: 4/3;
     background: var(--color-surface-container-high);
     border: 1px solid var(--color-outline-variant);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    overflow: hidden;
   }
 
-  .region-map-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
-    padding: 2rem;
+  .region-map iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
   }
 
-  .region-map-icon {
-    font-size: 3.5rem !important;
-    color: var(--color-primary-container);
-  }
-
-  .region-map-label {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-on-surface);
-  }
-
-  .region-map-btn {
-    font-size: 11px;
-    padding: 0.75rem 1.5rem;
+  .region-map-link {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    background: var(--color-primary-container);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 2;
+    transition: background 0.2s;
+  }
+
+  .region-map-link:hover {
+    background: #b08d4a;
+  }
+
+  .region-map-link .material-symbols-outlined {
+    font-size: 14px !important;
   }
 
   /* ── CTA ── */
