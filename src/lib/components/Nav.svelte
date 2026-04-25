@@ -68,7 +68,7 @@
         <button
           class="nav-link nav-dropdown-trigger"
           class:nav-link--active={isActive('/referenzen')}
-          on:click={toggleLeistungen}
+          on:click={toggleReferenzen}
           aria-expanded={leistungenOpen}
           aria-haspopup="true"
         >
@@ -120,7 +120,7 @@
       <div class="nav-mobile-group">
         <button
           class="nav-mobile-link nav-mobile-parent"
-          on:click={toggleLeistungen}
+          on:click={toggleReferenzen}
           aria-expanded={leistungenOpen}
         >
           Referenzen
