@@ -138,15 +138,6 @@
 
       </div>
       <div class="philosophie-autor">
-        <div class="autor-avatar">
-          <img
-            src="/images/louis-portrait.jpg"
-            alt="Thomas Louis – Schreinermeister und Gründer"
-            width="64"
-            height="64"
-            loading="lazy"
-          />
-        </div>
         <div>
           <p class="autor-name">Thomas Louis</p>
           <p class="label-caps autor-titel">Schreinermeister &amp; Gründer</p>
@@ -157,8 +148,8 @@
     <div class="philosophie-bild-wrap">
       <div class="philosophie-bild">
         <img
-          src="/images/werkstatt.jpg"
-          alt="Helle Schreinerwerkstatt mit natürlichem Licht und hochwertigen Werkzeugen"
+          src="/images/thomas-portrait.jpg"
+          alt="Thomas Louis – Schreinermeister in seiner Werkstatt in Thal SG"
           class="philosophie-img"
           loading="lazy"
         />
@@ -428,21 +419,6 @@
     margin-top: 3rem;
   }
 
-  .autor-avatar {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    overflow: hidden;
-    background: var(--color-surface-container);
-    flex-shrink: 0;
-  }
-
-  .autor-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   .autor-name {
     font-size: var(--text-body-lg);
     font-weight: 700;
@@ -458,9 +434,10 @@
     position: relative;
   }
 
-  .philosophie-bild {
+  .philosophie-bild,
+  .philosophie-portrait {
     position: relative;
-    aspect-ratio: 4/5;
+    aspect-ratio: 3/4;
     background: var(--color-surface-container-high);
     overflow: hidden;
   }
