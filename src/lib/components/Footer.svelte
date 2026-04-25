@@ -38,7 +38,7 @@
 
   <!-- BOTTOM BAR -->
   <div class="footer-bottom container">
-    <p class="footer-copy">© {year} Holzdesign Louis. Schreinerei in der Ostschweiz.</p>
+    <p class="footer-copy">© {year} Holzdesign Louis. Schreiner Ostschweiz.</p>
   </div>
 
   <!-- GEO für KI-Crawler -->
