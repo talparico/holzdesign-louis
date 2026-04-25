@@ -1,49 +1,18 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
 
-  let name = '';
-  let email = '';
-  let telefon = '';
-  let nachricht = '';
-  let status = ''; // 'sending' | 'success' | 'error'
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    status = 'sending';
-
-    try {
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'kontakt',
-          name, email, telefon, nachricht
-        }).toString()
-      });
-
-      if (res.ok) {
-        status = 'success';
-        name = ''; email = ''; telefon = ''; nachricht = '';
-      } else {
-        status = 'error';
-      }
-    } catch {
-      status = 'error';
-    }
-  }
-
   const seoSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Kontakt – Holzdesign Louis",
-    "description": "Nehmen Sie Kontakt mit Holzdesign Louis auf. Wir freuen uns auf Ihre Anfrage.",
+    "description": "Nehmen Sie Kontakt mit Holzdesign Louis auf.",
     "url": "https://www.holzdesign-louis.ch/kontakt"
   };
 </script>
 
 <SeoHead
   title="Kontakt – Holzdesign Louis Thal SG"
-  description="Nehmen Sie Kontakt mit Holzdesign Louis auf. Wir freuen uns auf Ihre Anfrage für Massmöbel, Küchen und Innenausbauten aus Thal SG."
+  description="Nehmen Sie Kontakt mit Holzdesign Louis auf. Rufen Sie an oder schreiben Sie eine E-Mail – wir freuen uns auf Ihre Anfrage."
   canonical="/kontakt"
   schema={seoSchema}
 />
@@ -57,8 +26,8 @@
         <h1>Lassen Sie uns gemeinsam etwas Besonderes schaffen.</h1>
         <p class="hero-lead">
           Ob Massmöbel, Küche oder Innenausbau – wir freuen uns auf Ihre Ideen
-          und beraten Sie gerne unverbindlich. Nehmen Sie Kontakt auf und wir
-          melden uns schnellstmöglich bei Ihnen.
+          und beraten Sie gerne unverbindlich. Rufen Sie einfach an oder
+          schreiben Sie uns eine E-Mail.
         </p>
       </div>
       <div class="hero-bild">
@@ -74,187 +43,99 @@
   <div class="container"><div class="grain-divider" style="margin-top:3rem;"></div></div>
 </section>
 
-<!-- HAUPT-CONTENT -->
+<!-- KONTAKT CARDS -->
 <section class="kontakt-section container">
-  <div class="kontakt-grid">
+  <div class="cards-grid">
 
-    <!-- FORMULAR -->
-    <div class="form-wrap">
-      <h2 class="form-title">Nachricht senden</h2>
+    <!-- Telefon -->
+    <a href="tel:+41795544030" class="kontakt-card">
+      <div class="card-icon">
+        <span class="material-symbols-outlined">call</span>
+      </div>
+      <div class="card-content">
+        <span class="label-caps card-label">Anrufen</span>
+        <p class="card-wert">+41 79 554 40 30</p>
+        <p class="card-hinweis">Mo – Fr, 07:30 – 17:30 Uhr</p>
+      </div>
+      <span class="material-symbols-outlined card-arrow">arrow_forward</span>
+    </a>
 
-      {#if status === 'success'}
-        <div class="form-success">
-          <span class="material-symbols-outlined">check_circle</span>
-          <div>
-            <p class="success-title">Nachricht erhalten!</p>
-            <p class="success-text">Wir melden uns so schnell wie möglich bei Ihnen. Vielen Dank für Ihre Anfrage.</p>
-          </div>
+    <!-- E-Mail -->
+    <a href="mailto:holzdesignlouis@gmail.com" class="kontakt-card">
+      <div class="card-icon">
+        <span class="material-symbols-outlined">mail</span>
+      </div>
+      <div class="card-content">
+        <span class="label-caps card-label">E-Mail schreiben</span>
+        <p class="card-wert">holzdesignlouis@gmail.com</p>
+        <p class="card-hinweis">Wir antworten so schnell wie möglich</p>
+      </div>
+      <span class="material-symbols-outlined card-arrow">arrow_forward</span>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="kontakt-card"
+    >
+      <div class="card-icon">
+        <span class="material-symbols-outlined">work</span>
+      </div>
+      <div class="card-content">
+        <span class="label-caps card-label">LinkedIn</span>
+        <p class="card-wert">Holzdesign Louis</p>
+        <p class="card-hinweis">Link folgt in Kürze</p>
+      </div>
+      <span class="material-symbols-outlined card-arrow">open_in_new</span>
+    </a>
+
+  </div>
+
+  <!-- ADRESSE + MAP -->
+  <div class="standort-grid">
+    <div class="adresse-wrap">
+      <h2 class="adresse-titel">Unsere Werkstatt</h2>
+      <div class="adresse-detail">
+        <span class="material-symbols-outlined adresse-icon">location_on</span>
+        <div>
+          <p class="adresse-text">Rheineckerstrasse 7</p>
+          <p class="adresse-text">9425 Thal SG</p>
+          <p class="adresse-text">Schweiz</p>
         </div>
-      {:else}
-        <form
-          name="kontakt"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          on:submit={handleSubmit}
-          class="kontakt-form"
-        >
-          <input type="hidden" name="form-name" value="kontakt" />
-          <p class="hidden"><label>Nicht ausfüllen: <input name="bot-field" /></label></p>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name" class="form-label">Name *</label>
-              <input
-                id="name" name="name" type="text"
-                bind:value={name}
-                required
-                placeholder="Ihr vollständiger Name"
-                class="form-input"
-              />
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">E-Mail *</label>
-              <input
-                id="email" name="email" type="email"
-                bind:value={email}
-                required
-                placeholder="ihre@email.ch"
-                class="form-input"
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="telefon" class="form-label">Telefon (optional)</label>
-            <input
-              id="telefon" name="telefon" type="tel"
-              bind:value={telefon}
-              placeholder="+41 79 000 00 00"
-              class="form-input"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="nachricht" class="form-label">Ihre Nachricht *</label>
-            <textarea
-              id="nachricht" name="nachricht"
-              bind:value={nachricht}
-              required
-              rows="6"
-              placeholder="Beschreiben Sie Ihr Projekt oder Ihre Idee..."
-              class="form-input form-textarea"
-            ></textarea>
-          </div>
-
-          {#if status === 'error'}
-            <div class="form-error">
-              <span class="material-symbols-outlined">error</span>
-              Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine E-Mail.
-            </div>
-          {/if}
-
-          <button type="submit" class="btn-submit" disabled={status === 'sending'}>
-            {#if status === 'sending'}
-              <span class="material-symbols-outlined spin">autorenew</span>
-              Wird gesendet...
-            {:else}
-              Nachricht senden
-              <span class="material-symbols-outlined">send</span>
-            {/if}
-          </button>
-
-          <p class="form-hinweis">* Pflichtfelder. Ihre Daten werden vertraulich behandelt.</p>
-        </form>
-      {/if}
+      </div>
+      <div class="adresse-detail">
+        <span class="material-symbols-outlined adresse-icon">schedule</span>
+        <div>
+          <p class="adresse-text">Montag – Freitag</p>
+          <p class="adresse-text">07:30 – 17:30 Uhr</p>
+          <p class="adresse-text" style="color:var(--color-outline)">Samstag nach Vereinbarung</p>
+        </div>
+      </div>
+      <a
+        href="https://maps.google.com/?q=Rheineckerstrasse+7,+9425+Thal,+Schweiz"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-directions"
+      >
+        <span class="material-symbols-outlined">directions</span>
+        Route planen
+      </a>
     </div>
 
-    <!-- KONTAKTDETAILS -->
-    <div class="details-wrap">
-      <h2 class="details-title">So erreichen Sie uns</h2>
-
-      <div class="detail-items">
-        <div class="detail-item">
-          <div class="detail-icon">
-            <span class="material-symbols-outlined">location_on</span>
-          </div>
-          <div>
-            <p class="label-caps detail-label">Werkstatt</p>
-            <p class="detail-text">Rheineckerstrasse 7<br/>9425 Thal SG<br/>Schweiz</p>
-          </div>
-        </div>
-
-        <div class="detail-item">
-          <div class="detail-icon">
-            <span class="material-symbols-outlined">call</span>
-          </div>
-          <div>
-            <p class="label-caps detail-label">Telefon</p>
-            <a href="tel:+41795544030" class="detail-text detail-link">+41 79 554 40 30</a>
-          </div>
-        </div>
-
-        <div class="detail-item">
-          <div class="detail-icon">
-            <span class="material-symbols-outlined">mail</span>
-          </div>
-          <div>
-            <p class="label-caps detail-label">E-Mail</p>
-            <a href="mailto:holzdesignlouis@gmail.com" class="detail-text detail-link">holzdesignlouis@gmail.com</a>
-          </div>
-        </div>
-
-        <div class="detail-item">
-          <div class="detail-icon">
-            <span class="material-symbols-outlined">schedule</span>
-          </div>
-          <div>
-            <p class="label-caps detail-label">Erreichbarkeit</p>
-            <p class="detail-text">Mo – Fr: 07:30 – 17:30 Uhr<br/>Sa: nach Vereinbarung</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Instagram -->
-      <div class="insta-box">
-        <span class="material-symbols-outlined insta-icon">photo_camera</span>
-        <p class="insta-text">
-          Folgen Sie unserem Alltag auf Instagram
-          <a
-            href="https://www.instagram.com/holzdesign.louis"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="insta-link"
-          >
-            @holzdesign.louis
-          </a>
-        </p>
-      </div>
-
-      <!-- Google Maps -->
-      <div class="map-wrap">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.5!2d9.5583!3d47.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1d0000000001%3A0x0!2sRheineckerstrasse+7%2C+9425+Thal!5e0!3m2!1sde!2sch!4v1620000000000!5m2!1sde!2sch"
-          width="100%"
-          height="100%"
-          style="border:0; display:block;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Holzdesign Louis – Rheineckerstrasse 7, 9425 Thal SG"
-        ></iframe>
-        <a
-          href="https://maps.google.com/?q=Rheineckerstrasse+7,+9425+Thal,+Schweiz"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="map-link"
-        >
-          <span class="material-symbols-outlined">open_in_new</span>
-          Auf Google Maps öffnen
-        </a>
-      </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.5!2d9.5583!3d47.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1d0000000001%3A0x0!2sRheineckerstrasse+7%2C+9425+Thal!5e0!3m2!1sde!2sch!4v1620000000000!5m2!1sde!2sch"
+        width="100%"
+        height="100%"
+        style="border:0; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Holzdesign Louis – Rheineckerstrasse 7, 9425 Thal SG"
+      ></iframe>
     </div>
-
   </div>
 </section>
 
@@ -263,7 +144,7 @@
   .kontakt-hero { padding: 5rem 0 0; }
   .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; }
   .hero-badge { color: var(--color-primary-container); display: block; margin-bottom: 1rem; }
-  .kontakt-hero h1 { margin-bottom: 1.5rem; font-size: 2.75rem; }
+  .kontakt-hero h1 { margin-bottom: 1.5rem; }
   .hero-lead { font-size: var(--text-body-lg); color: var(--color-on-surface-variant); line-height: 1.7; }
   .hero-bild { aspect-ratio: 4/3; overflow: hidden; }
   .hero-img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(15%); }
@@ -271,117 +152,76 @@
   @media (max-width: 768px) {
     .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
     .hero-bild { aspect-ratio: 16/9; }
-    .kontakt-hero h1 { font-size: 2rem; }
   }
 
-  /* HAUPTSEKTION */
+  /* KONTAKT CARDS */
   .kontakt-section { padding: 5rem 0 var(--space-section); }
-  .kontakt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-
-  @media (max-width: 900px) {
-    .kontakt-grid { grid-template-columns: 1fr; gap: 4rem; }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 5rem;
   }
 
-  /* FORMULAR */
-  .form-wrap {}
-  .form-title {
-    font-family: var(--font-serif); font-size: var(--text-h2);
-    font-weight: 600; margin-bottom: 2rem;
-  }
-  .kontakt-form { display: flex; flex-direction: column; gap: 1.5rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
-
-  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-  .form-label {
-    font-family: var(--font-sans); font-size: 12px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--color-on-surface-variant);
-  }
-  .form-input {
-    font-family: var(--font-sans); font-size: var(--text-body-md);
-    color: var(--color-on-surface);
-    background: var(--color-surface-container-lowest);
-    border: 1.5px solid var(--color-outline-variant);
-    padding: 0.875rem 1rem;
-    border-radius: var(--radius-sm);
-    transition: border-color 0.2s;
-    outline: none;
-    width: 100%;
-  }
-  .form-input:focus { border-color: var(--color-primary-container); }
-  .form-input::placeholder { color: var(--color-outline); }
-  .form-textarea { resize: vertical; min-height: 160px; }
-
-  .hidden { display: none; }
-
-  .form-error {
-    display: flex; align-items: center; gap: 0.75rem;
-    background: var(--color-error-container);
-    color: var(--color-on-error-container);
-    padding: 1rem; border-radius: var(--radius-sm);
-    font-size: 14px;
+  @media (max-width: 768px) {
+    .cards-grid { grid-template-columns: 1fr; }
   }
 
-  .form-success {
-    display: flex; align-items: flex-start; gap: 1rem;
+  .kontakt-card {
+    display: flex; align-items: center; gap: 1.5rem;
+    padding: 2rem;
     background: var(--color-surface-container-low);
-    border: 1.5px solid var(--color-primary-container);
-    padding: 1.5rem; border-radius: var(--radius-sm);
+    border: 1.5px solid var(--color-outline-variant);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    border-radius: var(--radius-sm);
   }
-  .form-success .material-symbols-outlined { color: var(--color-primary-container); font-size: 2rem !important; flex-shrink: 0; }
-  .success-title { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
-  .success-text { color: var(--color-on-surface-variant); font-size: 14px; line-height: 1.6; }
-
-  .btn-submit {
-    display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem;
-    background: var(--color-on-surface); color: #fff;
-    padding: 1.25rem 2.5rem;
-    font-family: var(--font-sans); font-size: var(--text-label); font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    border: none; cursor: pointer; border-radius: var(--radius-sm);
-    transition: background 0.2s; width: 100%;
-  }
-  .btn-submit:hover:not(:disabled) { background: #333; }
-  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .spin { animation: spin 1s linear infinite; }
-
-  .form-hinweis { font-size: 12px; color: var(--color-outline); text-align: center; }
-
-  /* DETAILS */
-  .details-wrap {}
-  .details-title {
-    font-family: var(--font-serif); font-size: var(--text-h2);
-    font-weight: 600; margin-bottom: 2rem;
-  }
-  .detail-items { display: flex; flex-direction: column; gap: 1.75rem; margin-bottom: 2rem; }
-  .detail-item { display: flex; align-items: flex-start; gap: 1.25rem; }
-  .detail-icon {
+  .kontakt-card:hover {
+    border-color: var(--color-primary-container);
     background: var(--color-surface-container);
-    padding: 0.75rem; border-radius: 50%;
+    transform: translateY(-2px);
+  }
+
+  .card-icon {
+    background: var(--color-primary-container);
+    color: #fff;
+    width: 56px; height: 56px;
+    border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-  .detail-icon .material-symbols-outlined { color: var(--color-primary-container); font-size: 22px !important; }
-  .detail-label { color: var(--color-primary-container); font-size: 10px; margin-bottom: 0.25rem; }
-  .detail-text { color: var(--color-on-surface); font-size: var(--text-body-md); line-height: 1.6; }
-  .detail-link { text-decoration: none; transition: color 0.2s; }
-  .detail-link:hover { color: var(--color-primary-container); }
+  .card-icon .material-symbols-outlined { font-size: 24px !important; }
 
-  /* INSTAGRAM BOX */
-  .insta-box {
-    display: flex; align-items: center; gap: 1rem;
-    background: var(--color-surface-container);
-    border: 1px solid var(--color-outline-variant);
-    padding: 1.25rem; margin-bottom: 2rem;
-    border-radius: var(--radius-sm);
+  .card-content { flex: 1; }
+  .card-label { color: var(--color-primary-container); font-size: 10px; display: block; margin-bottom: 0.25rem; }
+  .card-wert { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; color: var(--color-on-surface); margin-bottom: 0.25rem; }
+  .card-hinweis { font-size: 13px; color: var(--color-on-surface-variant); }
+
+  .card-arrow { color: var(--color-primary-container); font-size: 22px !important; flex-shrink: 0; transition: transform 0.2s; }
+  .kontakt-card:hover .card-arrow { transform: translateX(4px); }
+
+  /* STANDORT */
+  .standort-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+
+  @media (max-width: 768px) {
+    .standort-grid { grid-template-columns: 1fr; gap: 3rem; }
   }
-  .insta-icon { color: var(--color-on-surface-variant); font-size: 22px !important; flex-shrink: 0; }
-  .insta-text { font-size: 14px; color: var(--color-on-surface-variant); font-style: italic; }
-  .insta-link { color: var(--color-primary-container); font-weight: 600; text-decoration: none; margin-left: 0.25rem; }
-  .insta-link:hover { text-decoration: underline; }
+
+  .adresse-titel { font-family: var(--font-serif); font-size: var(--text-h2); font-weight: 600; margin-bottom: 2rem; }
+  .adresse-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.75rem; }
+  .adresse-icon { color: var(--color-primary-container); font-size: 22px !important; margin-top: 2px; flex-shrink: 0; }
+  .adresse-text { font-size: var(--text-body-md); color: var(--color-on-surface); line-height: 1.7; }
+
+  .btn-directions {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    background: var(--color-on-surface); color: #fff;
+    padding: 1rem 2rem;
+    font-family: var(--font-sans); font-size: var(--text-label); font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    border-radius: var(--radius-sm); text-decoration: none;
+    transition: background 0.2s; margin-top: 1rem;
+  }
+  .btn-directions:hover { background: #333; }
 
   /* MAP */
   .map-wrap {
@@ -390,17 +230,4 @@
     overflow: hidden;
   }
   .map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .map-link {
-    position: absolute; bottom: 0.75rem; right: 0.75rem;
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    background: var(--color-primary-container); color: #fff;
-    padding: 0.5rem 1rem; border-radius: 2px;
-    font-family: var(--font-sans); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    text-decoration: none; z-index: 2;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: background 0.2s;
-  }
-  .map-link:hover { background: #b08d4a; }
-  .map-link .material-symbols-outlined { font-size: 14px !important; }
 </style>
