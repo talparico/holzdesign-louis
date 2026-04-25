@@ -1,5 +1,5 @@
 ---
-title: Küche in Eiche und Weiss
+title: Massivholzküche
 kategorie: küchen
 bilder:
   - bild: /images/leistung-2.jpg
