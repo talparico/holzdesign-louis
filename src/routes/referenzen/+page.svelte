@@ -1,5 +1,6 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
+  import seo from '../../content/einstellungen/seo.json';
 
   export let data;
   const projekte = data?.projekte || [];
@@ -78,7 +79,7 @@
 <svelte:window on:keydown={handleKey} />
 
 <SeoHead
-  title="Referenzen & Projekte – Holzdesign Louis Thal SG"
+  title={seo.referenzenTitel}
   description="Entdecken Sie realisierte Projekte von Holzdesign Louis: Massmöbel, Küchen, Türen, Holzbau, Gebäudehülle und Terrassen. Schreinerei aus Thal SG."
   canonical="/referenzen"
   schema={seoSchema}
