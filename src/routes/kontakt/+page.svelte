@@ -81,7 +81,7 @@
 
     <!-- LinkedIn -->
     <a
-      href="https://www.linkedin.com"
+      href="https://www.linkedin.com/company/holzdesign-louis"
       target="_blank"
       rel="noopener noreferrer"
       class="kontakt-card"
@@ -92,7 +92,25 @@
       <div class="card-content">
         <span class="label-caps card-label">LinkedIn</span>
         <p class="card-wert">Holzdesign Louis</p>
-        <p class="card-hinweis">Link folgt in Kürze</p>
+        <p class="card-hinweis">Folgen Sie uns auf LinkedIn</p>
+      </div>
+      <span class="material-symbols-outlined card-arrow">open_in_new</span>
+    </a>
+
+    <!-- Facebook -->
+    <a
+      href="https://www.facebook.com/p/Holzdesign-100066821556229/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="kontakt-card"
+    >
+      <div class="card-icon">
+        <span class="material-symbols-outlined">thumb_up</span>
+      </div>
+      <div class="card-content">
+        <span class="label-caps card-label">Facebook</span>
+        <p class="card-wert">Holzdesign Louis</p>
+        <p class="card-hinweis">Folgen Sie uns auf Facebook</p>
       </div>
       <span class="material-symbols-outlined card-arrow">open_in_new</span>
     </a>
@@ -164,7 +182,7 @@
   .kontakt-section { padding: 5rem 0 var(--space-section); }
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-bottom: 5rem;
   }
