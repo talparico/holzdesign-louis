@@ -148,8 +148,9 @@
 
   .footer-credit p {
     font-family: var(--font-sans);
-    font-size: 11px;
-    color: var(--color-outline);
+    font-size: 10px;
+    color: var(--color-outline-variant);
+    letter-spacing: 0.03em;
   }
 
   .credit-link {
