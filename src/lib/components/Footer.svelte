@@ -42,6 +42,11 @@
     <p class="footer-copy">© {year} Holzdesign Louis. Schreiner Ostschweiz.</p>
   </div>
 
+  <!-- E-Commotion Credit -->
+  <div class="footer-credit container">
+    <p>Webseite erstellt von <a href="https://www.e-commotion.ch/" target="_blank" rel="noopener noreferrer" class="credit-link">E-Commotion</a></p>
+  </div>
+
   <!-- GEO für KI-Crawler -->
   <div
     aria-hidden="true"
@@ -134,6 +139,25 @@
     padding: 1.25rem 0;
     margin-top: 0;
   }
+
+  .footer-credit {
+    border-top: 1px solid var(--color-outline-variant);
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+
+  .footer-credit p {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--color-outline);
+  }
+
+  .credit-link {
+    color: var(--color-outline);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .credit-link:hover { color: var(--color-primary-container); }
 
   .footer-copy {
     font-family: var(--font-serif);
