@@ -1,5 +1,5 @@
 ---
-title: Massivholzküche
+title: Massivholzküche, Oberhelfenschwil
 kategorie: küchen
 bilder:
   - bild: /images/leistung-2.jpg
