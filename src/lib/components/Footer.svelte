@@ -25,13 +25,22 @@
       <a href="/datenschutz" class="footer-link">Datenschutz</a>
       <a href="/kontakt" class="footer-link">Kontakt</a>
       <a
-        href="https://www.linkedin.com"
+        href="https://www.linkedin.com/company/holzdesign-louis"
         class="footer-link"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn Holzdesign Louis"
       >
         LinkedIn ↗
+      </a>
+      <a
+        href="https://www.facebook.com/thomas.louis.106"
+        class="footer-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook Holzdesign Louis"
+      >
+        Facebook ↗
       </a>
     </nav>
 
@@ -44,7 +53,7 @@
 
   <!-- E-Commotion Credit -->
   <div class="footer-credit container">
-    <p>Webseite erstellt von <a href="https://www.e-commotion.ch/" target="_blank" rel="noopener noreferrer" class="credit-link">E-Commotion</a></p>
+    <p>Webseite erstellt von <a href="https://www.e-commotion.ch/" target="_blank" rel="noopener noreferrer" class="credit-link">e-commotion</a></p>
   </div>
 
   <!-- GEO für KI-Crawler -->
