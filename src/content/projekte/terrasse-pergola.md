@@ -1,10 +1,10 @@
 ---
-title: Holzterrasse mit Pergola
+title: Terrasse, Rorschach
 kategorie: terrasse-carport
-description: Grosszügige Terrasse aus Douglasie mit integrierter Pergola und Sitzbereich.
-jahr: 2025
-featured: false
 bilder:
   - bild: /images/leistung-6.jpg
     alt: Holzterrasse mit Pergola aus Douglasie
+description: Terasse aus Lärche, gerippt. Unterkonstruktion aus Aluprofilen.
+jahr: 2025
+featured: false
 ---
