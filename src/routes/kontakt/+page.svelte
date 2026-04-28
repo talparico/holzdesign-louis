@@ -99,7 +99,7 @@
 
     <!-- Facebook -->
     <a
-      href="https://www.facebook.com/p/Holzdesign-100066821556229/"
+      href="https://www.facebook.com/thomas.louis.106"
       target="_blank"
       rel="noopener noreferrer"
       class="kontakt-card"
