@@ -1,10 +1,11 @@
 ---
-title: Holztreppe mit Tanne
+title: Gartenhaus  in Niederurnen, Fam. Schmid
 kategorie: holzbau
-description: Geschwungene Treppe aus Weisstandenholz mit handgefertigtem Geländer.
-jahr: 2025
-featured: false
 bilder:
   - bild: /images/leistung-4.jpg
     alt: Holztreppe aus Weisstandenholz
+description: Gartenhaus mit einer Stülpschalung und angrenzender
+  Schildkrötenzucht, klimatisiert.
+jahr: 2025
+featured: false
 ---
