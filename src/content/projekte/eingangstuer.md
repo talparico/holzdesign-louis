@@ -1,10 +1,11 @@
 ---
-title: Rustikale Eingangstür
+title: Rustikale Zimmertür
 kategorie: türen-fenster
-description: Historische Altholztür mit original Eisenbeschlägen und moderner Dämmung.
-jahr: 2024
-featured: false
 bilder:
   - bild: /images/leistung-3.jpg
     alt: Rustikale Eingangstür aus Altholz
+description: "Historische Altholztür mit handgeschmiedeten Beschlägen. Die Tür
+  wurde aus Bodendielen die auf der Baustelle demontiert wurden hergestellt. "
+jahr: 2024
+featured: false
 ---
