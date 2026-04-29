@@ -8,7 +8,7 @@
       "jahr": 2025,
       "featured": true,
       "bilder": [
-        { "bild": "/uploads/altholzschrank.jpg", "alt": "Altholzschrank mit Glasfront" }
+        { "bild": "/images/leistung-1.jpg", "alt": "Altholzschrank mit Glasfront" }
       ]
     },
     {
@@ -19,7 +19,7 @@
       "jahr": 2025,
       "featured": true,
       "bilder": [
-        { "bild": "/uploads/massivholzkueche.jpg", "alt": "Küche in Eiche und Weiss" }
+        { "bild": "/images/leistung-2.jpg", "alt": "Massivholzküche Oberhelfenschwil" }
       ]
     },
     {
@@ -30,7 +30,7 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/uploads/zimmertur.jpg", "alt": "Rustikale Zimmertür" }
+        { "bild": "/images/leistung-3.jpg", "alt": "Rustikale Zimmertür" }
       ]
     },
     {
@@ -41,7 +41,7 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/uploads/gartenhaus-niederurnen.jpg", "alt": "Holztreppe aus Weisstandenholz" }
+        { "bild": "/images/leistung-4.jpg", "alt": "Gartenhaus Niederurnen" }
       ]
     },
     {
@@ -52,7 +52,7 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/uploads/terrasse-stuelpschalung.jpg", "alt": "Terrasse mit Stülpschalung" }
+        { "bild": "/images/leistung-5.jpg", "alt": "Terrasse mit Stülpschalung" }
       ]
     },
     {
@@ -63,7 +63,18 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/uploads/terrasse-rorschach.jpg", "alt": "Terrasse Rorschach" }
+        { "bild": "/images/leistung-6.jpg", "alt": "Terrasse Rorschach" }
+      ]
+    },
+    {
+      "title": "Carport – Beispielprojekt",
+      "slug": "carport-beispiel",
+      "kategorie": "carport",
+      "description": "Massgeschneiderter Carport aus nachhaltigem Holz – wetterbeständig, langlebig und individuell gestaltet. Kontaktieren Sie uns für Ihr Projekt.",
+      "jahr": 2025,
+      "featured": false,
+      "bilder": [
+        { "bild": "/images/hero-holzbearbeitung.jpg", "alt": "Carport aus Holz" }
       ]
     }
   ]
