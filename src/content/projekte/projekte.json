@@ -2,68 +2,68 @@
   "projekte": [
     {
       "title": "Altholzschrank mit Glasfront",
-      "slug": "altholzschrank",
+      "slug": "altholzschrank-glasfront",
       "kategorie": "möbel",
-      "description": "Massgeschneiderter Vitrinenschrank aus recyceltem Altholz mit handgeschmiedeten Beschlägen.",
+      "description": "Massgeschneiderter Vitrinenschrank aus gebürstetem Altholz mit handgeschmiedeten Beschlägen. Onyx schwarze Beschläge mit Schliesdämpfung.",
       "jahr": 2025,
       "featured": true,
       "bilder": [
-        { "bild": "/images/leistung-1.jpg", "alt": "Altholzschrank mit Glasfront" }
+        { "bild": "/uploads/altholzschrank.jpg", "alt": "Altholzschrank mit Glasfront" }
       ]
     },
     {
-      "title": "Küche in Eiche und Weiss",
-      "slug": "kueche-eiche",
+      "title": "Massivholzküche, Oberhelfenschwil",
+      "slug": "massivholzkueche-oberhelfenschwil",
       "kategorie": "küchen",
-      "description": "Offene Küche mit Eichenfronten, integriertem Backofen und massiver Arbeitsplatte.",
+      "description": "Offene Küche mit Fronten aus Kernesche natur geölt farblos. Arbeitsplatte aus Naturstein. Korpuse aus 3-Schicht Fichte unbehandelt. Innenleben der Schubladen mit Organizer wie, Messer- und Folienhalter, Gewürzhalter etc.",
       "jahr": 2025,
       "featured": true,
       "bilder": [
-        { "bild": "/images/leistung-2.jpg", "alt": "Küche in Eiche und Weiss" }
+        { "bild": "/uploads/massivholzkueche.jpg", "alt": "Küche in Eiche und Weiss" }
       ]
     },
     {
-      "title": "Rustikale Eingangstür",
-      "slug": "eingangstuer",
+      "title": "Rustikale Zimmertür",
+      "slug": "rustikale-zimmertur",
       "kategorie": "türen-fenster",
-      "description": "Historische Altholztür mit original Eisenbeschlägen und moderner Dämmung.",
-      "jahr": 2024,
+      "description": "Historische Altholztür mit handgeschmiedeten Beschlägen. Die Tür wurde aus Bodendielen die auf der Baustelle demontiert wurden hergestellt.",
+      "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/leistung-3.jpg", "alt": "Rustikale Eingangstür aus Altholz" }
+        { "bild": "/uploads/zimmertur.jpg", "alt": "Rustikale Zimmertür" }
       ]
     },
     {
-      "title": "Holztreppe mit Tanne",
-      "slug": "holztreppe",
+      "title": "Gartenhaus in Niederurnen, Fam. Schmid",
+      "slug": "gartenhaus-niederurnen",
       "kategorie": "holzbau",
-      "description": "Geschwungene Treppe aus Weisstandenholz mit handgefertigtem Geländer.",
+      "description": "Gartenhaus mit einer Stülpschalung und angrenzender Schildkrötenzucht, klimatisiert.",
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/leistung-4.jpg", "alt": "Holztreppe aus Weisstandenholz" }
+        { "bild": "/uploads/gartenhaus-niederurnen.jpg", "alt": "Holztreppe aus Weisstandenholz" }
       ]
     },
     {
-      "title": "Balkon mit Holzfassade",
-      "slug": "balkon-fassade",
+      "title": "Terrasse mit Stülpschalung",
+      "slug": "terrasse-stuelpschalung",
       "kategorie": "gebäudehülle",
-      "description": "Aussenverkleidung und Balkonkonstruktion aus sibirischer Lärche.",
-      "jahr": 2024,
-      "featured": false,
-      "bilder": [
-        { "bild": "/images/leistung-5.jpg", "alt": "Balkon mit Holzfassade aus Lärche" }
-      ]
-    },
-    {
-      "title": "Holzterrasse mit Pergola",
-      "slug": "terrasse-pergola",
-      "kategorie": "terrasse-carport",
-      "description": "Grosszügige Terrasse aus Douglasie mit integrierter Pergola und Sitzbereich.",
+      "description": "Stülpschalung aus Fichte mit Colorshield Imprägnierung, hinterlüftet. Fenster und Türfutter aus Lärche unbehandelt. Angebaute Terrasse aus schichtverleimte Fichte ebenfalls mit Colorshield Imprägnierung.",
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/leistung-6.jpg", "alt": "Holzterrasse mit Pergola aus Douglasie" }
+        { "bild": "/uploads/terrasse-stuelpschalung.jpg", "alt": "Terrasse mit Stülpschalung" }
+      ]
+    },
+    {
+      "title": "Terrasse, Rorschach",
+      "slug": "terrasse-rorschach",
+      "kategorie": "terrasse",
+      "description": "Terasse aus Lärche, gerippt. Unterkonstruktion aus Aluprofilen.",
+      "jahr": 2025,
+      "featured": false,
+      "bilder": [
+        { "bild": "/uploads/terrasse-rorschach.jpg", "alt": "Terrasse Rorschach" }
       ]
     }
   ]
