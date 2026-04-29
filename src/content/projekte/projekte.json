@@ -97,19 +97,6 @@
           "alt": "Carport aus Holz"
         }
       ]
-    },
-    {
-      "jahr": 2026,
-      "featured": false,
-      "title": "Test",
-      "kategorie": "carport",
-      "description": "dfsdfs",
-      "bilder": [
-        {
-          "bild": "/uploads/6c4e7abe-88ba-4f50-a642-b9d214b99354.png",
-          "alt": "dsdfs"
-        }
-      ]
     }
   ]
 }
