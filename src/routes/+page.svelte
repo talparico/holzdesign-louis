@@ -13,64 +13,22 @@
 
   const kennzahlen = homepage.kennzahlen;
 
-  const leistungen = [
-    {
-      title: 'Möbel',
-      text: 'Einzigartige Möbelstücke, massgeschneidert auf Ihren Wohnraum und persönlichen Stil.',
-      href: '/referenzen#möbel',
-      cta: 'Referenzen ansehen',
-      span: 2,
-      imgAlt: 'Massgeschneidertes Möbelstück aus edlem Holz',
-    },
-    {
-      title: 'Küchen',
-      text: 'Funktionale Eleganz für das Herz Ihres Zuhauses.',
-      href: '/referenzen#küchen',
-      cta: 'Referenzen ansehen',
-      span: 1,
-      imgAlt: 'Handgefertigte Holzküche mit modernem Design',
-    },
-    {
-      title: 'Türen / Fenster',
-      text: 'Hochwertige Türen und Fenster nach Mass – präzise gefertigt.',
-      href: '/referenzen#türen-fenster',
-      cta: 'Referenzen ansehen',
-      span: 1,
-      imgAlt: 'Massgeschneiderte Holztür mit traditionellen Beschlägen',
-    },
-    {
-      title: 'Allgemeiner Holzbau',
-      text: 'Von der Treppe bis zur Raumgestaltung – Holzlösungen für jede Anforderung.',
-      href: '/referenzen#holzbau',
-      cta: 'Referenzen ansehen',
-      span: 1,
-      imgAlt: 'Holztreppe und Innenausbau',
-    },
-    {
-      title: 'Gebäudehülle',
-      text: 'Fassaden, Verkleidungen und Aussenverputz mit natürlichem Holz.',
-      href: '/referenzen#gebäudehülle',
-      cta: 'Referenzen ansehen',
-      span: 1,
-      imgAlt: 'Holzfassade und Gebäudeverkleidung',
-    },
-    {
-      title: 'Terrasse',
-      text: 'Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich.',
-      href: '/referenzen#terrasse',
-      cta: 'Referenzen ansehen',
-      span: 1,
-      imgAlt: 'Holzterrasse aus Naturholz',
-    },
-    {
-      title: 'Carport',
-      text: 'Carports aus robustem Holz – langlebig, wetterbeständig und individuell.',
-      href: '/referenzen#carport',
-      cta: 'Referenzen ansehen',
-      span: 1,
-      imgAlt: 'Carport aus Holz',
-    },
-  ];
+  const leistungen = (homepage.kacheln || [
+    { titel: 'Möbel', text: 'Einzigartige Möbelstücke, massgeschneidert auf Ihren Wohnraum und persönlichen Stil.', href: '/referenzen#möbel', bild: '/images/leistung-1.jpg', span: 2 },
+    { titel: 'Küchen', text: 'Funktionale Eleganz für das Herz Ihres Zuhauses.', href: '/referenzen#küchen', bild: '/images/leistung-2.jpg', span: 1 },
+    { titel: 'Türen / Fenster', text: 'Hochwertige Türen und Fenster nach Mass – präzise gefertigt.', href: '/referenzen#türen-fenster', bild: '/images/leistung-3.jpg', span: 1 },
+    { titel: 'Allgemeiner Holzbau', text: 'Von der Treppe bis zur Raumgestaltung – Holzlösungen für jede Anforderung.', href: '/referenzen#holzbau', bild: '/images/leistung-4.jpg', span: 1 },
+    { titel: 'Gebäudehülle', text: 'Fassaden, Verkleidungen und Aussenarbeiten mit natürlichem Holz.', href: '/referenzen#gebäudehülle', bild: '/images/leistung-5.jpg', span: 1 },
+    { titel: 'Terrasse', text: 'Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich.', href: '/referenzen#terrasse', bild: '/images/leistung-6.jpg', span: 2 },
+  ]).map((k, i) => ({
+    title: k.titel,
+    text: k.text,
+    href: k.href,
+    cta: 'Referenzen ansehen',
+    span: k.span || 1,
+    imgAlt: k.titel,
+    bild: k.bild,
+  }));
 </script>
 
 <SeoHead
@@ -194,7 +152,7 @@
         <!-- Platzhalterfläche (ersetzen durch echtes Bild) -->
         <div class="bento-img-wrap">
           <img
-            src="/images/leistung-{i + 1}.jpg"
+            src={l.bild || `/images/leistung-${i + 1}.jpg`}
             alt={l.imgAlt}
             class="bento-img"
             loading="lazy"
