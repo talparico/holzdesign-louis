@@ -1,5 +1,8 @@
 <script>
   import { page } from '$app/stores';
+  import { onMount } from 'svelte';
+  let mounted = false;
+  onMount(() => { mounted = true; });
 
   let mobileOpen = false;
   let leistungenOpen = false;
@@ -26,9 +29,10 @@
     if (e.key === 'Escape') closeAll();
   }
 
-  $: pathname = $page.url.pathname;
+  $: pathname = mounted ? $page.url.pathname : '';
 
   function isActive(href) {
+    if (!mounted) return false;
     if (href === '/') return pathname === '/';
     return pathname === href || pathname.startsWith(href + '/');
   }
