@@ -1,49 +1,11 @@
 <script>
   import SeoHead from '$lib/components/SeoHead.svelte';
 
-  const cms = {
-    heroTitel: "Holz hat eine Seele – und einen Herzschlag.",
-    werte: [
-      { icon: 'favorite',                titel: 'Leidenschaft',    text: 'Jedes Projekt ist Ausdruck unserer Begeisterung für den Werkstoff Holz.' },
-      { icon: 'precision_manufacturing', titel: 'Präzision',       text: 'Schweizer Qualität bedeutet für uns: kein Kompromiss. Jeder Millimeter zählt.' },
-      { icon: 'nature',                  titel: 'Nachhaltigkeit',  text: 'Wir verarbeiten nur nachhaltig geerntetes Holz aus kontrollierten Quellen.' },
-      { icon: 'handshake',               titel: 'Vertrauen',       text: 'Ehrliche Beratung, transparente Preise und zuverlässige Ausführung.' },
-    ],
-    heroText: "Holzdesign Louis ist mehr als eine Schreinerei. Es ist eine Leidenschaft, die Thomas Louis seit über 15 Jahren lebt – mit Herzblut, Präzision und tiefem Respekt vor dem Werkstoff Holz.",
-    thomasTitel: "Thomas Louis – Schreinermeister & Gründer",
-    thomasText1: "Aufgewachsen in der Ostschweiz war Holz schon immer mehr als nur ein Werkstoff für Thomas Louis. Als Kind verbrachte er Stunden in der Werkstatt seines Grossvaters und lernte früh, dass gutes Handwerk Geduld, Hingabe und ein Gespür für das Material braucht.",
-    thomasText2: "Nach der Ausbildung und der Meisterprüfung gründete er Holzdesign Louis mit einer klaren Vision: Möbel und Innenausbauten schaffen, die Generationen überdauern – massgeschneidert, nachhaltig und mit einem Hauch Magie.",
-    thomasText3: "Heute führt er seine Werkstatt in Thal SG und realisiert Projekte in der gesamten Schweiz. Jedes Projekt ist für ihn persönlich – vom ersten Gespräch bis zur Montage."
-  };
+  import cmsData from '../../content/einstellungen/ueber-uns.json';
+  const cms = cmsData;
 
-  const meilensteine = [
-    {
-      jahr: '2010',
-      titel: 'Die Leidenschaft beginnt',
-      text: 'Thomas Louis schliesst seine Ausbildung als Schreiner ab und beginnt seine ersten eigenen Projekte – mit viel Leidenschaft und dem Willen, etwas Eigenes aufzubauen.',
-    },
-    {
-      jahr: '2015',
-      titel: 'Meisterprüfung bestanden',
-      text: 'Nach intensiver Weiterbildung legt Thomas die Schreinermeisterprüfung ab. Der Grundstein für Holzdesign Louis als eigenständiges Unternehmen ist gelegt.',
-    },
-    {
-      jahr: '2018',
-      titel: 'Eigene Werkstatt in Thal SG',
-      text: 'Mit der Eröffnung der Werkstatt an der Rheineckerstrasse 7 in Thal SG entsteht der Herzschlag des Unternehmens – ein Ort, an dem Holz seine Seele entfalten kann.',
-    },
-    {
-      jahr: '2022',
-      titel: 'Wachstum & neue Maschinen',
-      text: 'Investitionen in moderne Technik ermöglichen noch präzisere Arbeiten. Die Auftragsbücher sind voll – von Thal bis Zürich.',
-    },
-    {
-      jahr: '2026',
-      titel: 'Heute – in der ganzen Schweiz unterwegs',
-      text: 'Über 200 realisierte Projekte, zufriedene Kunden und ein Handwerker, der täglich mit Herzblut arbeitet.',
-    },
-  ];
 
+  const meilensteine = cms.meilensteine || [];
   const werte = cms.werte || [
     { icon: 'favorite',                 titel: 'Leidenschaft',    text: 'Jedes Projekt ist Ausdruck unserer Begeisterung für den Werkstoff Holz.' },
     { icon: 'precision_manufacturing',  titel: 'Präzision',       text: 'Schweizer Qualität bedeutet für uns: kein Kompromiss. Jeder Millimeter zählt.' },
