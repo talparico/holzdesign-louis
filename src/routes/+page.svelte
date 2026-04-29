@@ -193,7 +193,7 @@
           <span>Schreinerei</span>
         </div>
         <div class="partner-icon-tile">
-          <span class="material-symbols-outlined">tile</span>
+          <span class="material-symbols-outlined">layers</span>
           <span>Plattenbeläge</span>
         </div>
         <div class="partner-icon-tile">
