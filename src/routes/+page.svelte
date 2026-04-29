@@ -173,6 +173,51 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
+     PARTNER
+═══════════════════════════════════════════ -->
+<section class="partner-section" aria-label="Partnernetzwerk">
+  <div class="container partner-inner">
+    <div class="partner-text">
+      <span class="label-caps partner-badge">{homepage.partnerBadge || 'Rundum-Service'}</span>
+      <h2>{homepage.partnerTitel || 'Ihr Projekt – komplett aus einer Hand'}</h2>
+      <p class="partner-lead">{homepage.partnerText || 'Wir koordinieren alle Gewerke für Sie.'}</p>
+      <a href="/kontakt" class="btn-primary partner-cta">
+        Jetzt anfragen
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+    <div class="partner-icons">
+      <div class="partner-icon-grid">
+        <div class="partner-icon-tile">
+          <span class="material-symbols-outlined">carpenter</span>
+          <span>Schreinerei</span>
+        </div>
+        <div class="partner-icon-tile">
+          <span class="material-symbols-outlined">tile</span>
+          <span>Plattenbeläge</span>
+        </div>
+        <div class="partner-icon-tile">
+          <span class="material-symbols-outlined">format_paint</span>
+          <span>Malerarbeiten</span>
+        </div>
+        <div class="partner-icon-tile">
+          <span class="material-symbols-outlined">bolt</span>
+          <span>Elektro</span>
+        </div>
+        <div class="partner-icon-tile">
+          <span class="material-symbols-outlined">water_drop</span>
+          <span>Sanitär</span>
+        </div>
+        <div class="partner-icon-tile">
+          <span class="material-symbols-outlined">handshake</span>
+          <span>Koordination</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
      REGION
 ═══════════════════════════════════════════ -->
 <section class="region-section" aria-label="Unser Standort">
@@ -549,6 +594,92 @@
   .bento-card:hover .bento-cta { gap: 1rem; }
 
   .bento-arrow { font-size: 18px !important; }
+
+  /* ── Partner ── */
+  .partner-section {
+    background: var(--color-on-surface);
+    padding: var(--space-section) 0;
+  }
+
+  .partner-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .partner-badge {
+    color: var(--color-primary-fixed-dim);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .partner-text h2 {
+    font-family: var(--font-serif);
+    font-size: var(--text-h2);
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .partner-lead {
+    color: rgba(255,255,255,0.75);
+    font-size: var(--text-body-lg);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .partner-cta {
+    background: var(--color-primary-container);
+    text-decoration: none;
+  }
+  .partner-cta:hover { background: #b08d4a; }
+
+  .partner-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .partner-icon-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+  }
+
+  .partner-icon-tile:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .partner-icon-tile .material-symbols-outlined {
+    font-size: 2rem !important;
+    color: var(--color-primary-fixed-dim);
+  }
+
+  .partner-icon-tile span:last-child {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .partner-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .partner-text { text-align: center; }
+    .partner-badge { text-align: center; }
+    .partner-cta { margin: 0 auto; display: flex; width: fit-content; }
+    .partner-icon-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+  }
 
   /* ── Region ── */
   .region-section {
