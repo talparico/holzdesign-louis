@@ -152,7 +152,7 @@
         <!-- Platzhalterfläche (ersetzen durch echtes Bild) -->
         <div class="bento-img-wrap">
           <img
-            src={l.bild || `/images/leistung-${i + 1}.jpg`}
+            src={l.bild ? l.bild : '/images/leistung-' + (i + 1) + '.jpg'}
             alt={l.imgAlt}
             class="bento-img"
             loading="lazy"
