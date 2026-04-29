@@ -6,12 +6,13 @@
   const projekte = data?.projekte || [];
 
   const kategorien = [
-    { slug: 'möbel',            label: 'Möbel',               icon: 'chair' },
-    { slug: 'küchen',           label: 'Küchen',               icon: 'kitchen' },
-    { slug: 'türen-fenster',    label: 'Türen / Fenster',      icon: 'door_front' },
-    { slug: 'holzbau',          label: 'Allgemeiner Holzbau',  icon: 'stairs' },
-    { slug: 'gebäudehülle',     label: 'Gebäudehülle',         icon: 'home' },
-    { slug: 'terrasse-carport', label: 'Terrasse / Carport',   icon: 'deck' },
+    { slug: 'möbel',         label: 'Möbel',                icon: 'chair' },
+    { slug: 'küchen',        label: 'Küchen',               icon: 'kitchen' },
+    { slug: 'türen-fenster', label: 'Türen / Fenster',      icon: 'door_front' },
+    { slug: 'holzbau',       label: 'Allgemeiner Holzbau',  icon: 'stairs' },
+    { slug: 'gebäudehülle',  label: 'Gebäudehülle',         icon: 'home' },
+    { slug: 'terrasse',      label: 'Terrasse',             icon: 'deck' },
+    { slug: 'carport',       label: 'Carport',              icon: 'garage' },
   ];
 
   const beschreibungen = {
@@ -20,7 +21,8 @@
     'türen-fenster':    'Hochwertige Türen und Fenster nach Mass – mit traditionellen Techniken und modernen Dämmeigenschaften.',
     'holzbau':          'Von der Treppe bis zur Raumgestaltung – individuelle Holzlösungen für jeden Bedarf in Wohn- und Geschäftsräumen.',
     'gebäudehülle':     'Fassaden, Verkleidungen und Aussenarbeiten mit natürlichem Holz – langlebig, nachhaltig und ästhetisch ansprechend.',
-    'terrasse-carport': 'Terrassen und Carports aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich und das Schweizer Klima.',
+    'terrasse':      'Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich und das Schweizer Klima.',
+    'carport':       'Carports aus robustem Holz – langlebig, wetterbeständig und individuell gestaltet.',
   };
 
   function getProjekte(slug) {
