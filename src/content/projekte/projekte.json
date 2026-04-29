@@ -1,68 +1,70 @@
-[
-  {
-    "title": "Altholzschrank mit Glasfront",
-    "slug": "altholzschrank",
-    "kategorie": "möbel",
-    "description": "Massgeschneiderter Vitrinenschrank aus recyceltem Altholz mit handgeschmiedeten Beschlägen.",
-    "jahr": 2025,
-    "featured": true,
-    "bilder": [
-      { "bild": "/images/leistung-1.jpg", "alt": "Altholzschrank mit Glasfront" }
-    ]
-  },
-  {
-    "title": "Küche in Eiche und Weiss",
-    "slug": "kueche-eiche",
-    "kategorie": "küchen",
-    "description": "Offene Küche mit Eichenfronten, integriertem Backofen und massiver Arbeitsplatte.",
-    "jahr": 2025,
-    "featured": true,
-    "bilder": [
-      { "bild": "/images/leistung-2.jpg", "alt": "Küche in Eiche und Weiss" }
-    ]
-  },
-  {
-    "title": "Rustikale Eingangstür",
-    "slug": "eingangstuer",
-    "kategorie": "türen-fenster",
-    "description": "Historische Altholztür mit original Eisenbeschlägen und moderner Dämmung.",
-    "jahr": 2024,
-    "featured": false,
-    "bilder": [
-      { "bild": "/images/leistung-3.jpg", "alt": "Rustikale Eingangstür aus Altholz" }
-    ]
-  },
-  {
-    "title": "Holztreppe mit Tanne",
-    "slug": "holztreppe",
-    "kategorie": "holzbau",
-    "description": "Geschwungene Treppe aus Weisstandenholz mit handgefertigtem Geländer.",
-    "jahr": 2025,
-    "featured": false,
-    "bilder": [
-      { "bild": "/images/leistung-4.jpg", "alt": "Holztreppe aus Weisstandenholz" }
-    ]
-  },
-  {
-    "title": "Balkon mit Holzfassade",
-    "slug": "balkon-fassade",
-    "kategorie": "gebäudehülle",
-    "description": "Aussenverkleidung und Balkonkonstruktion aus sibirischer Lärche.",
-    "jahr": 2024,
-    "featured": false,
-    "bilder": [
-      { "bild": "/images/leistung-5.jpg", "alt": "Balkon mit Holzfassade aus Lärche" }
-    ]
-  },
-  {
-    "title": "Holzterrasse mit Pergola",
-    "slug": "terrasse-pergola",
-    "kategorie": "terrasse-carport",
-    "description": "Grosszügige Terrasse aus Douglasie mit integrierter Pergola und Sitzbereich.",
-    "jahr": 2025,
-    "featured": false,
-    "bilder": [
-      { "bild": "/images/leistung-6.jpg", "alt": "Holzterrasse mit Pergola aus Douglasie" }
-    ]
-  }
-]
+{
+  "projekte": [
+    {
+      "title": "Altholzschrank mit Glasfront",
+      "slug": "altholzschrank",
+      "kategorie": "möbel",
+      "description": "Massgeschneiderter Vitrinenschrank aus recyceltem Altholz mit handgeschmiedeten Beschlägen.",
+      "jahr": 2025,
+      "featured": true,
+      "bilder": [
+        { "bild": "/images/leistung-1.jpg", "alt": "Altholzschrank mit Glasfront" }
+      ]
+    },
+    {
+      "title": "Küche in Eiche und Weiss",
+      "slug": "kueche-eiche",
+      "kategorie": "küchen",
+      "description": "Offene Küche mit Eichenfronten, integriertem Backofen und massiver Arbeitsplatte.",
+      "jahr": 2025,
+      "featured": true,
+      "bilder": [
+        { "bild": "/images/leistung-2.jpg", "alt": "Küche in Eiche und Weiss" }
+      ]
+    },
+    {
+      "title": "Rustikale Eingangstür",
+      "slug": "eingangstuer",
+      "kategorie": "türen-fenster",
+      "description": "Historische Altholztür mit original Eisenbeschlägen und moderner Dämmung.",
+      "jahr": 2024,
+      "featured": false,
+      "bilder": [
+        { "bild": "/images/leistung-3.jpg", "alt": "Rustikale Eingangstür aus Altholz" }
+      ]
+    },
+    {
+      "title": "Holztreppe mit Tanne",
+      "slug": "holztreppe",
+      "kategorie": "holzbau",
+      "description": "Geschwungene Treppe aus Weisstandenholz mit handgefertigtem Geländer.",
+      "jahr": 2025,
+      "featured": false,
+      "bilder": [
+        { "bild": "/images/leistung-4.jpg", "alt": "Holztreppe aus Weisstandenholz" }
+      ]
+    },
+    {
+      "title": "Balkon mit Holzfassade",
+      "slug": "balkon-fassade",
+      "kategorie": "gebäudehülle",
+      "description": "Aussenverkleidung und Balkonkonstruktion aus sibirischer Lärche.",
+      "jahr": 2024,
+      "featured": false,
+      "bilder": [
+        { "bild": "/images/leistung-5.jpg", "alt": "Balkon mit Holzfassade aus Lärche" }
+      ]
+    },
+    {
+      "title": "Holzterrasse mit Pergola",
+      "slug": "terrasse-pergola",
+      "kategorie": "terrasse-carport",
+      "description": "Grosszügige Terrasse aus Douglasie mit integrierter Pergola und Sitzbereich.",
+      "jahr": 2025,
+      "featured": false,
+      "bilder": [
+        { "bild": "/images/leistung-6.jpg", "alt": "Holzterrasse mit Pergola aus Douglasie" }
+      ]
+    }
+  ]
+}
