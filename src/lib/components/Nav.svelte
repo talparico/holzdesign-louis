@@ -26,9 +26,11 @@
     if (e.key === 'Escape') closeAll();
   }
 
+  $: pathname = $page.url.pathname;
+
   function isActive(href) {
-    if (href === '/') return $page.url.pathname === '/';
-    return $page.url.pathname === href || $page.url.pathname.startsWith(href + '/');
+    if (href === '/') return pathname === '/';
+    return pathname === href || pathname.startsWith(href + '/');
   }
 </script>
 
@@ -217,14 +219,13 @@
     padding: 0;
   }
 
-  .nav-link:hover,
-  .nav-link--active {
+  .nav-link:hover {
     color: var(--color-primary-container);
   }
 
   .nav-link--active {
-    border-bottom: 1px solid var(--color-primary-container);
-    padding-bottom: 2px;
+    color: var(--color-primary-container) !important;
+    font-weight: 700;
   }
 
   .nav-chevron {
