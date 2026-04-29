@@ -2,13 +2,8 @@
   import SeoHead from '$lib/components/SeoHead.svelte';
   import allgemein from '../../content/einstellungen/allgemein.json';
 
-  const cms = {
-    heroTitel: "Lassen Sie uns gemeinsam etwas Besonderes schaffen.",
-    heroText: "Ob Massmöbel, Küche oder Innenausbau – wir freuen uns auf Ihre Ideen und beraten Sie gerne unverbindlich. Rufen Sie einfach an oder schreiben Sie uns eine E-Mail.",
-    oeffnung1: "Montag – Freitag",
-    oeffnung2: "07:30 – 17:30 Uhr",
-    oeffnungZusatz: "Samstag nach Vereinbarung"
-  };
+  import cmsKontakt from '../../content/einstellungen/kontakt.json';
+  const cms = cmsKontakt;
   import seo from '../../content/einstellungen/seo.json';
 
   const seoSchema = {
