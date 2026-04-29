@@ -3,13 +3,66 @@
   "heroTitel": "Wo Präzision auf Natur trifft",
   "heroText": "Massgeschneiderte Holzarbeiten für gehobene Wohnräume. Wir verwandeln edelstes Holz in zeitlose Möbel und Innenausbauten – mit Leidenschaft und Schweizer Präzision.",
   "kennzahlen": [
-    { "zahl": "15+", "label": "Jahre Meisterschaft" },
-    { "zahl": "200+", "label": "Realisierte Projekte" },
-    { "zahl": "100%", "label": "Schweizer Handwerk" }
+    {
+      "zahl": "15+",
+      "label": "Jahre Meisterschaft"
+    },
+    {
+      "zahl": "200+",
+      "label": "Realisierte Projekte"
+    },
+    {
+      "zahl": "100%",
+      "label": "Schweizer Handwerk"
+    }
   ],
   "philosophieTitel": "Handwerkliche Holzkunst als lebenslange Leidenschaft",
   "philosophieText1": "Holz hat eine Seele – und einen Herzschlag. Jede Maserung erzählt eine Geschichte von Widerstandskraft, Wärme und Schönheit. Bei Holzdesign Louis ist es unsere Leidenschaft, diese Geschichte durch sorgfältiges Handwerk und zeitgemässe Designästhetik zum Leben zu erwecken.",
   "philosophieText2": "Unsere Werkstatt verbindet jahrhundertealte Techniken mit modernster Präzision. Wir verarbeiten nur nachhaltige und hochwertige Hölzer – damit jedes Stück, das wir schaffen, nicht einfach ein Möbelstück ist, sondern ein Vermächtnis, das Generationen überdauert.",
   "regionTitel": "Verwurzelt in Thal SG – unterwegs in der ganzen Schweiz",
-  "regionText": "Unsere Werkstatt liegt in Thal im Kanton St. Gallen, mitten im Herzen der Ostschweiz. Von hier aus realisieren wir Projekte in der gesamten Schweiz – ob Zürich, Basel, Bern oder Graubünden. Kurze Wege, persönlicher Kontakt und Schweizer Qualität, die man anfassen kann."
+  "regionText": "Unsere Werkstatt liegt in Thal im Kanton St. Gallen, mitten im Herzen der Ostschweiz. Von hier aus realisieren wir Projekte in der gesamten Schweiz – ob Zürich, Basel, Bern oder Graubünden. Kurze Wege, persönlicher Kontakt und Schweizer Qualität, die man anfassen kann.",
+  "kacheln": [
+    {
+      "titel": "Möbel",
+      "text": "Einzigartige Möbelstücke, massgeschneidert auf Ihren Wohnraum und persönlichen Stil.",
+      "href": "/referenzen#möbel",
+      "bild": "/images/leistung-1.jpg",
+      "span": 2
+    },
+    {
+      "titel": "Küchen",
+      "text": "Funktionale Eleganz für das Herz Ihres Zuhauses.",
+      "href": "/referenzen#küchen",
+      "bild": "/images/leistung-2.jpg",
+      "span": 1
+    },
+    {
+      "titel": "Türen / Fenster",
+      "text": "Hochwertige Türen und Fenster nach Mass – präzise gefertigt.",
+      "href": "/referenzen#türen-fenster",
+      "bild": "/images/leistung-3.jpg",
+      "span": 1
+    },
+    {
+      "titel": "Allgemeiner Holzbau",
+      "text": "Von der Treppe bis zur Raumgestaltung – Holzlösungen für jede Anforderung.",
+      "href": "/referenzen#holzbau",
+      "bild": "/images/leistung-4.jpg",
+      "span": 1
+    },
+    {
+      "titel": "Gebäudehülle",
+      "text": "Fassaden, Verkleidungen und Aussenarbeiten mit natürlichem Holz.",
+      "href": "/referenzen#gebäudehülle",
+      "bild": "/images/leistung-5.jpg",
+      "span": 1
+    },
+    {
+      "titel": "Terrasse",
+      "text": "Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich.",
+      "href": "/referenzen#terrasse",
+      "bild": "/images/leistung-6.jpg",
+      "span": 2
+    }
+  ]
 }
