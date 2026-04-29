@@ -14,12 +14,12 @@
   const kennzahlen = homepage.kennzahlen;
 
   const leistungen = (homepage.kacheln || [
-    { titel: 'Möbel', text: 'Einzigartige Möbelstücke, massgeschneidert auf Ihren Wohnraum und persönlichen Stil.', href: '/referenzen#möbel', bild: '/images/leistung-1.jpg', span: 2 },
+    { titel: 'Möbel', text: 'Einzigartige Möbelstücke, massgeschneidert auf Ihren Wohnraum und persönlichen Stil.', href: '/referenzen#möbel', bild: '/images/leistung-1.jpg', span: 1 },
     { titel: 'Küchen', text: 'Funktionale Eleganz für das Herz Ihres Zuhauses.', href: '/referenzen#küchen', bild: '/images/leistung-2.jpg', span: 1 },
     { titel: 'Türen / Fenster', text: 'Hochwertige Türen und Fenster nach Mass – präzise gefertigt.', href: '/referenzen#türen-fenster', bild: '/images/leistung-3.jpg', span: 1 },
     { titel: 'Allgemeiner Holzbau', text: 'Von der Treppe bis zur Raumgestaltung – Holzlösungen für jede Anforderung.', href: '/referenzen#holzbau', bild: '/images/leistung-4.jpg', span: 1 },
     { titel: 'Gebäudehülle', text: 'Fassaden, Verkleidungen und Aussenarbeiten mit natürlichem Holz.', href: '/referenzen#gebäudehülle', bild: '/images/leistung-5.jpg', span: 1 },
-    { titel: 'Terrasse', text: 'Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich.', href: '/referenzen#terrasse', bild: '/images/leistung-6.jpg', span: 2 },
+    { titel: 'Terrasse', text: 'Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich.', href: '/referenzen#terrasse', bild: '/images/leistung-6.jpg', span: 1 },
   ]).map((k, i) => ({
     title: k.titel,
     text: k.text,
@@ -521,7 +521,7 @@
 
   @media (min-width: 768px) {
     .bento-grid { grid-template-columns: repeat(3, 1fr); }
-    .bento-wide { grid-column: span 2; }
+    .bento-wide { grid-column: span 1; }
   }
 
   .bento-card {
@@ -599,6 +599,7 @@
   .partner-section {
     background: var(--color-on-surface);
     padding: var(--space-section) 0;
+    overflow: hidden;
   }
 
   .partner-inner {
@@ -606,6 +607,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
   }
 
   .partner-badge {
@@ -674,11 +680,20 @@
   }
 
   @media (max-width: 768px) {
-    .partner-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .partner-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 0 24px;
+    }
     .partner-text { text-align: center; }
     .partner-badge { text-align: center; }
-    .partner-cta { margin: 0 auto; display: flex; width: fit-content; }
-    .partner-icon-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+    .partner-lead { text-align: center; }
+    .partner-cta { margin: 0 auto; display: flex; width: fit-content; justify-content: center; }
+    .partner-icon-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    .partner-icon-tile span:last-child { font-size: 10px; }
   }
 
   /* ── Region ── */
