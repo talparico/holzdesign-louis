@@ -55,12 +55,20 @@
       imgAlt: 'Holzfassade und Gebäudeverkleidung',
     },
     {
-      title: 'Terrasse / Carport',
-      text: 'Terrassen und Carports aus nachhaltigem Holz – für draussen gemacht.',
-      href: '/referenzen#terrasse-carport',
+      title: 'Terrasse',
+      text: 'Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich.',
+      href: '/referenzen#terrasse',
       cta: 'Referenzen ansehen',
-      span: 2,
-      imgAlt: 'Holzterrasse mit Carport aus Naturholz',
+      span: 1,
+      imgAlt: 'Holzterrasse aus Naturholz',
+    },
+    {
+      title: 'Carport',
+      text: 'Carports aus robustem Holz – langlebig, wetterbeständig und individuell.',
+      href: '/referenzen#carport',
+      cta: 'Referenzen ansehen',
+      span: 1,
+      imgAlt: 'Carport aus Holz',
     },
   ];
 </script>
