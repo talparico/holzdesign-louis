@@ -27,6 +27,7 @@
   }
 
   function isActive(href) {
+    if (href === '/') return $page.url.pathname === '/';
     return $page.url.pathname === href || $page.url.pathname.startsWith(href + '/');
   }
 </script>
