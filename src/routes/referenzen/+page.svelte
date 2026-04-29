@@ -12,7 +12,7 @@
     { slug: 'holzbau',       label: 'Allgemeiner Holzbau',  icon: 'stairs' },
     { slug: 'gebäudehülle',  label: 'Gebäudehülle',         icon: 'home' },
     { slug: 'terrasse',      label: 'Terrasse',             icon: 'deck' },
-    { slug: 'carport',       label: 'Carport',              icon: 'garage' },
+
   ];
 
   const beschreibungen = {
@@ -22,7 +22,7 @@
     'holzbau':          'Von der Treppe bis zur Raumgestaltung – individuelle Holzlösungen für jeden Bedarf in Wohn- und Geschäftsräumen.',
     'gebäudehülle':     'Fassaden, Verkleidungen und Aussenarbeiten mit natürlichem Holz – langlebig, nachhaltig und ästhetisch ansprechend.',
     'terrasse':      'Terrassen aus nachhaltigem Holz – massgeschneidert für Ihren Aussenbereich und das Schweizer Klima.',
-    'carport':       'Carports aus robustem Holz – langlebig, wetterbeständig und individuell gestaltet.',
+
   };
 
   function getProjekte(slug) {
