@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { browser } from '$app/environment';
 
   let mobileOpen = false;
   let leistungenOpen = false;
@@ -26,9 +27,10 @@
     if (e.key === 'Escape') closeAll();
   }
 
-  $: pathname = $page.url.pathname;
+  $: pathname = browser ? $page.url.pathname : '';
 
   function isActive(href) {
+    if (!browser) return false;
     if (href === '/') return pathname === '/';
     return pathname === href || pathname.startsWith(href + '/');
   }
