@@ -83,20 +83,6 @@
           "alt": "Terrasse Rorschach"
         }
       ]
-    },
-    {
-      "title": "Carport – Beispielprojekt",
-      "slug": "carport-beispiel",
-      "kategorie": "carport",
-      "description": "Massgeschneiderter Carport aus nachhaltigem Holz – wetterbeständig, langlebig und individuell gestaltet. Kontaktieren Sie uns für Ihr Projekt.",
-      "jahr": 2025,
-      "featured": false,
-      "bilder": [
-        {
-          "bild": "/images/hero-holzbearbeitung.jpg",
-          "alt": "Carport aus Holz"
-        }
-      ]
     }
   ]
 }
