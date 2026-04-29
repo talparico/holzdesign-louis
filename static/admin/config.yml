@@ -31,7 +31,8 @@ collections:
                   - { label: "Türen / Fenster", value: "türen-fenster" }
                   - { label: "Allgemeiner Holzbau", value: "holzbau" }
                   - { label: "Gebäudehülle", value: "gebäudehülle" }
-                  - { label: "Terrasse / Carport", value: "terrasse-carport" }
+                  - { label: "Terrasse", value: "terrasse" }
+                  - { label: "Carport", value: "carport" }
               - label: Bilder
                 name: bilder
                 widget: list
