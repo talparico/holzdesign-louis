@@ -10,7 +10,8 @@
     { href: '/referenzen#türen-fenster', label: 'Türen / Fenster' },
     { href: '/referenzen#holzbau', label: 'Allgemeiner Holzbau' },
     { href: '/referenzen#gebäudehülle', label: 'Gebäudehülle' },
-    { href: '/referenzen#terrasse-carport', label: 'Terrasse / Carport' },
+    { href: '/referenzen#terrasse', label: 'Terrasse' },
+    { href: '/referenzen#carport', label: 'Carport' },
   ];
 
   function toggleReferenzen() {
