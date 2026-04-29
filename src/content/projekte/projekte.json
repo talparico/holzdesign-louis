@@ -8,7 +8,10 @@
       "jahr": 2025,
       "featured": true,
       "bilder": [
-        { "bild": "/images/leistung-1.jpg", "alt": "Altholzschrank mit Glasfront" }
+        {
+          "bild": "/images/leistung-1.jpg",
+          "alt": "Altholzschrank mit Glasfront"
+        }
       ]
     },
     {
@@ -19,7 +22,10 @@
       "jahr": 2025,
       "featured": true,
       "bilder": [
-        { "bild": "/images/leistung-2.jpg", "alt": "Massivholzküche Oberhelfenschwil" }
+        {
+          "bild": "/images/leistung-2.jpg",
+          "alt": "Massivholzküche Oberhelfenschwil"
+        }
       ]
     },
     {
@@ -30,7 +36,10 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/leistung-3.jpg", "alt": "Rustikale Zimmertür" }
+        {
+          "bild": "/images/leistung-3.jpg",
+          "alt": "Rustikale Zimmertür"
+        }
       ]
     },
     {
@@ -41,7 +50,10 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/leistung-4.jpg", "alt": "Gartenhaus Niederurnen" }
+        {
+          "bild": "/images/leistung-4.jpg",
+          "alt": "Gartenhaus Niederurnen"
+        }
       ]
     },
     {
@@ -52,7 +64,10 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/leistung-5.jpg", "alt": "Terrasse mit Stülpschalung" }
+        {
+          "bild": "/images/leistung-5.jpg",
+          "alt": "Terrasse mit Stülpschalung"
+        }
       ]
     },
     {
@@ -63,7 +78,10 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/leistung-6.jpg", "alt": "Terrasse Rorschach" }
+        {
+          "bild": "/images/leistung-6.jpg",
+          "alt": "Terrasse Rorschach"
+        }
       ]
     },
     {
@@ -74,7 +92,23 @@
       "jahr": 2025,
       "featured": false,
       "bilder": [
-        { "bild": "/images/hero-holzbearbeitung.jpg", "alt": "Carport aus Holz" }
+        {
+          "bild": "/images/hero-holzbearbeitung.jpg",
+          "alt": "Carport aus Holz"
+        }
+      ]
+    },
+    {
+      "jahr": 2026,
+      "featured": false,
+      "title": "Test",
+      "kategorie": "carport",
+      "description": "dfsdfs",
+      "bilder": [
+        {
+          "bild": "/uploads/6c4e7abe-88ba-4f50-a642-b9d214b99354.png",
+          "alt": "dsdfs"
+        }
       ]
     }
   ]
