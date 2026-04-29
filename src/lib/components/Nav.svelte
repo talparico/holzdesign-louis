@@ -11,7 +11,6 @@
     { href: '/referenzen#holzbau', label: 'Allgemeiner Holzbau' },
     { href: '/referenzen#gebäudehülle', label: 'Gebäudehülle' },
     { href: '/referenzen#terrasse', label: 'Terrasse' },
-    { href: '/referenzen#carport', label: 'Carport' },
   ];
 
   function toggleReferenzen() {
