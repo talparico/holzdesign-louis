@@ -66,6 +66,9 @@ collections:
           - { label: Philosophie Text 1, name: philosophieText1, widget: text }
           - { label: Philosophie Text 2, name: philosophieText2, widget: text }
           - { label: Region Titel, name: regionTitel, widget: string }
+          - { label: "Partner – Badge", name: partnerBadge, widget: string, hint: "z.B. Rundum-Service" }
+          - { label: "Partner – Titel", name: partnerTitel, widget: string }
+          - { label: "Partner – Text", name: partnerText, widget: text }
           - label: Leistungs-Kacheln (Homepage)
             name: kacheln
             widget: list
