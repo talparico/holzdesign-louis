@@ -10,34 +10,41 @@ locale: de
 collections:
   - name: projekte
     label: Projekte
-    folder: src/content/projekte
-    create: true
-    slug: "{{slug}}"
-    summary: "{{title}} – {{kategorie}}"
-    fields:
-      - { label: Projekttitel, name: title, widget: string, hint: "z.B. Eichenschrank Familie Müller" }
-      - label: Kategorie
-        name: kategorie
-        widget: select
-        options:
-          - { label: "Möbel", value: "möbel" }
-          - { label: "Küchen", value: "küchen" }
-          - { label: "Türen / Fenster", value: "türen-fenster" }
-          - { label: "Allgemeiner Holzbau", value: "holzbau" }
-          - { label: "Gebäudehülle", value: "gebäudehülle" }
-          - { label: "Terrasse / Carport", value: "terrasse-carport" }
-      - label: Bilder
-        name: bilder
-        widget: list
-        label_singular: Bild
-        minimize_collapsed: true
+    files:
+      - label: Alle Projekte
+        name: alle-projekte
+        file: src/content/projekte/projekte.json
         fields:
-          - { label: Bild hochladen, name: bild, widget: image }
-          - { label: Bildbeschreibung, name: alt, widget: string }
-      - { label: Kurzbeschreibung, name: description, widget: text }
-      - { label: Detailtext (optional), name: body, widget: markdown, required: false }
-      - { label: Jahr, name: jahr, widget: number, default: 2026 }
-      - { label: Auf Startseite hervorheben, name: featured, widget: boolean, default: false }
+          - label: Projekte
+            name: projekte
+            widget: list
+            label_singular: Projekt
+            summary: "{{fields.title}} – {{fields.kategorie}}"
+            fields:
+              - { label: Projekttitel, name: title, widget: string, hint: "z.B. Eichenschrank Familie Müller" }
+              - label: Kategorie
+                name: kategorie
+                widget: select
+                options:
+                  - { label: "Möbel", value: "möbel" }
+                  - { label: "Küchen", value: "küchen" }
+                  - { label: "Türen / Fenster", value: "türen-fenster" }
+                  - { label: "Allgemeiner Holzbau", value: "holzbau" }
+                  - { label: "Gebäudehülle", value: "gebäudehülle" }
+                  - { label: "Terrasse / Carport", value: "terrasse-carport" }
+              - label: Bilder
+                name: bilder
+                widget: list
+                label_singular: Bild
+                minimize_collapsed: true
+                fields:
+                  - { label: Bild hochladen, name: bild, widget: image }
+                  - { label: Bildbeschreibung, name: alt, widget: string }
+              - { label: Kurzbeschreibung, name: description, widget: text }
+              - { label: Detailtext (optional), name: body, widget: string, required: false }
+              - { label: Jahr, name: jahr, widget: number, default: 2026 }
+              - { label: Auf Startseite hervorheben, name: featured, widget: boolean, default: false }
+              - { label: Slug, name: slug, widget: string, hint: "Eindeutige ID z.B. eichenschrank-2026" }
 
   - name: einstellungen
     label: Einstellungen
