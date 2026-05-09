@@ -1,10 +1,14 @@
 <script>
   import { page } from '$app/stores';
-  import { browser } from '$app/environment';
+  import { afterNavigate } from '$app/navigation';
 
   let mobileOpen = false;
   let leistungenOpen = false;
-  $: currentPath = browser ? $page.url.pathname : typeof window !== 'undefined' ? window.location.pathname : '';
+  let currentPath = '';
+
+  afterNavigate(({ to }) => {
+    currentPath = to?.url?.pathname ?? '';
+  });
 
   const leistungen = [
     { href: '/referenzen#möbel', label: 'Möbel' },
@@ -29,6 +33,7 @@
   }
 
   function isActive(href) {
+    if (!currentPath) return false;
     if (href === '/') return currentPath === '/';
     return currentPath === href || currentPath.startsWith(href + '/');
   }
