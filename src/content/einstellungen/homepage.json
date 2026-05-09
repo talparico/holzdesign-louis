@@ -1,26 +1,11 @@
 {
-  "heroBadge": "Traditionelles Handwerk",
-  "heroTitel": "Wo Präzision auf Natur trifft",
-  "heroText": "Massgeschneiderte Holzarbeiten für gehobene Wohnräume. Wir verwandeln edelstes Holz in zeitlose Möbel und Innenausbauten – mit Leidenschaft und Schweizer Präzision.",
-  "kennzahlen": [
-    {
-      "zahl": "15+",
-      "label": "Jahre Meisterschaft"
-    },
-    {
-      "zahl": "200+",
-      "label": "Realisierte Projekte"
-    },
-    {
-      "zahl": "100%",
-      "label": "Schweizer Handwerk"
-    }
-  ],
-  "philosophieTitel": "Handwerkliche Holzkunst als lebenslange Leidenschaft",
   "philosophieText1": "Holz hat eine Seele – und einen Herzschlag. Jede Maserung erzählt eine Geschichte von Widerstandskraft, Wärme und Schönheit. Bei Holzdesign Louis ist es unsere Leidenschaft, diese Geschichte durch sorgfältiges Handwerk und zeitgemässe Designästhetik zum Leben zu erwecken.",
   "philosophieText2": "Unsere Werkstatt verbindet jahrhundertealte Techniken mit modernster Präzision. Wir verarbeiten nur nachhaltige und hochwertige Hölzer – damit jedes Stück, das wir schaffen, nicht einfach ein Möbelstück ist, sondern ein Vermächtnis, das Generationen überdauert.",
-  "regionTitel": "Verwurzelt in Thal SG – unterwegs in der ganzen Schweiz",
   "regionText": "Unsere Werkstatt liegt in Thal im Kanton St. Gallen, mitten im Herzen der Ostschweiz. Von hier aus realisieren wir Projekte in der gesamten Schweiz – ob Zürich, Basel, Bern oder Graubünden. Kurze Wege, persönlicher Kontakt und Schweizer Qualität, die man anfassen kann.",
+  "philosophieTitel": "Handwerkliche Holzkunst als lebenslange Leidenschaft",
+  "heroText": "Massgeschneiderte Holzarbeiten für gehobene Wohnräume. Wir verwandeln edelstes Holz in zeitlose Möbel und Innenausbauten – mit Leidenschaft und Schweizer Präzision.",
+  "heroBadge": "Traditionelles Handwerk",
+  "heroTitel": "Wo Präzision auf Natur trifft",
   "kacheln": [
     {
       "titel": "Möbel",
@@ -65,7 +50,22 @@
       "span": 2
     }
   ],
-  "partnerTitel": "Ihr Projekt – komplett aus einer Hand",
+  "kennzahlen": [
+    {
+      "zahl": "15+",
+      "label": "Jahre Erfahrung"
+    },
+    {
+      "zahl": "200+",
+      "label": "Realisierte Projekte"
+    },
+    {
+      "zahl": "100%",
+      "label": "Schweizer Handwerk"
+    }
+  ],
+  "regionTitel": "Verwurzelt in Thal SG – unterwegs in der ganzen Schweiz",
   "partnerText": "Neben unserer Kernkompetenz in Holz bieten wir Ihnen ein bewährtes Netzwerk aus zuverlässigen Partnern. Ob Plattenbeläge, Malerarbeiten, Elektro oder Sanitär – wir koordinieren alle Gewerke für Sie und begleiten Ihr Projekt von der ersten Idee bis zur schlüsselfertigen Übergabe. Sie haben einen Ansprechpartner, wir kümmern uns um den Rest.",
-  "partnerBadge": "Rundum-Service"
+  "partnerBadge": "Rundum-Service",
+  "partnerTitel": "Ihr Projekt – komplett aus einer Hand"
 }
