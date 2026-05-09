@@ -1,14 +1,8 @@
 <script>
   import { page } from '$app/stores';
-  import { afterNavigate } from '$app/navigation';
 
   let mobileOpen = false;
   let leistungenOpen = false;
-  let currentPath = '';
-
-  afterNavigate(({ to }) => {
-    currentPath = to?.url?.pathname ?? '';
-  });
 
   const leistungen = [
     { href: '/referenzen#möbel', label: 'Möbel' },
@@ -33,9 +27,9 @@
   }
 
   function isActive(href) {
-    if (!currentPath) return false;
-    if (href === '/') return currentPath === '/';
-    return currentPath === href || currentPath.startsWith(href + '/');
+    const path = $page.url.pathname;
+    if (href === '/') return path === '/';
+    return path === href || path.startsWith(href + '/');
   }
 </script>
 
@@ -128,16 +122,12 @@
     <nav class="nav-mobile" aria-label="Mobile Navigation">
       <a href="/" class="nav-mobile-link" on:click={closeAll}>Home</a>
       <div class="nav-mobile-group">
-        <button
-          class="nav-mobile-link nav-mobile-parent"
-          on:click={toggleReferenzen}
-          aria-expanded={leistungenOpen}
-        >
-          Referenzen
-          <span class="material-symbols-outlined nav-chevron" class:rotated={leistungenOpen}>
-            expand_more
-          </span>
-        </button>
+        <div class="nav-mobile-row">
+          <a href="/referenzen" class="nav-mobile-link nav-mobile-parent" on:click={closeAll}>Referenzen</a>
+          <button class="nav-mobile-chevron-btn" on:click={toggleReferenzen} aria-expanded={leistungenOpen}>
+            <span class="material-symbols-outlined nav-chevron" class:rotated={leistungenOpen}>expand_more</span>
+          </button>
+        </div>
         {#if leistungenOpen}
           {#each leistungen as item}
             <a href={item.href} class="nav-mobile-sub" on:click={closeAll}>{item.label}</a>
@@ -352,7 +342,9 @@
   }
   .nav-mobile-link:hover { color: var(--color-primary-container); }
 
-  .nav-mobile-parent { font-weight: 500; }
+  .nav-mobile-parent { font-weight: 500; flex: 1; }
+  .nav-mobile-row { display: flex; align-items: center; }
+  .nav-mobile-chevron-btn { background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--color-on-surface-variant); }
 
   .nav-mobile-sub {
     display: block;
