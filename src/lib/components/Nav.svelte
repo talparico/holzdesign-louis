@@ -1,5 +1,17 @@
 <script>
   import { page } from '$app/stores';
+  import { onMount } from 'svelte';
+  import { afterNavigate } from '$app/navigation';
+
+  let currentPath = '';
+
+  onMount(() => {
+    currentPath = window.location.pathname;
+  });
+
+  afterNavigate(() => {
+    currentPath = window.location.pathname;
+  });
 
   let mobileOpen = false;
   let leistungenOpen = false;
@@ -27,9 +39,9 @@
   }
 
   function isActive(href) {
-    const path = $page.url.pathname;
-    if (href === '/') return path === '/';
-    return path === href || path.startsWith(href + '/');
+    if (!currentPath) return false;
+    if (href === '/') return currentPath === '/';
+    return currentPath === href || currentPath.startsWith(href + '/');
   }
 </script>
 
