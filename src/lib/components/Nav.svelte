@@ -1,5 +1,11 @@
 <script>
-  import { page } from '$app/stores';
+  export let currentPath = '';
+
+  function isActive(href) {
+    if (!currentPath) return false;
+    if (href === '/') return currentPath === '/';
+    return currentPath === href || currentPath.startsWith(href + '/');
+  }
 
   let mobileOpen = false;
   let leistungenOpen = false;
@@ -59,12 +65,12 @@
 
     <!-- Desktop Navigation -->
     <nav class="nav-desktop" aria-label="Hauptnavigation">
-      <a href="/" class="nav-link" data-navlink="/">Home</a>
+      <a href="/" class="nav-link" class:nav-link--active={isActive('/')}>Home</a>
 
       <!-- Leistungen Dropdown -->
       <div class="nav-dropdown-wrap">
         <a
-          class="nav-link nav-dropdown-trigger" data-navlink="/referenzen"
+          class="nav-link nav-dropdown-trigger" class:nav-link--active={isActive('/referenzen')}
           on:click={(e) => { if (currentPath === '/referenzen') { leistungenOpen = !leistungenOpen; } else { leistungenOpen = !leistungenOpen; } }}
           aria-expanded={leistungenOpen}
           aria-haspopup="true"
@@ -93,9 +99,9 @@
         {/if}
       </div>
 
-      <a href="/kontakt" class="nav-link" data-navlink="/kontakt">Kontakt</a>
+      <a href="/kontakt" class="nav-link" class:nav-link--active={isActive('/kontakt')}>Kontakt</a>
 
-      <a href="/ueber-uns" class="nav-link" data-navlink="/ueber-uns">Über uns</a>
+      <a href="/ueber-uns" class="nav-link" class:nav-link--active={isActive('/ueber-uns')}>Über uns</a>
     </nav>
 
     <!-- CTA + Hamburger -->
