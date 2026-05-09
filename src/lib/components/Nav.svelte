@@ -4,6 +4,7 @@
 
   let mobileOpen = false;
   let leistungenOpen = false;
+  $: currentPath = browser ? $page.url.pathname : typeof window !== 'undefined' ? window.location.pathname : '';
 
   const leistungen = [
     { href: '/referenzen#möbel', label: 'Möbel' },
@@ -27,12 +28,9 @@
     if (e.key === 'Escape') closeAll();
   }
 
-  $: pathname = browser ? $page.url.pathname : '';
-
   function isActive(href) {
-    if (!browser) return false;
-    if (href === '/') return pathname === '/';
-    return pathname === href || pathname.startsWith(href + '/');
+    if (href === '/') return currentPath === '/';
+    return currentPath === href || currentPath.startsWith(href + '/');
   }
 </script>
 
@@ -70,18 +68,19 @@
 
       <!-- Leistungen Dropdown -->
       <div class="nav-dropdown-wrap">
-        <button
+        <a
           class="nav-link nav-dropdown-trigger"
           class:nav-link--active={isActive('/referenzen')}
-          on:click={toggleReferenzen}
+          on:click={(e) => { if (currentPath === '/referenzen') { leistungenOpen = !leistungenOpen; } else { leistungenOpen = !leistungenOpen; } }}
           aria-expanded={leistungenOpen}
           aria-haspopup="true"
+          href="/referenzen"
         >
           Referenzen
           <span class="material-symbols-outlined nav-chevron" class:rotated={leistungenOpen}>
             expand_more
           </span>
-        </button>
+        </a>
 
         {#if leistungenOpen}
           <div class="nav-dropdown" role="menu">
