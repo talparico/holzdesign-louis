@@ -121,7 +121,7 @@
         />
         <div class="philosophie-badge-bild">
           <span class="philosophie-zahl">15+</span>
-          <span class="label-caps philosophie-jahre">Jahre Meisterschaft</span>
+          <span class="label-caps philosophie-jahre">Jahre Erfahrung</span>
         </div>
       </div>
       <div class="philosophie-deko" aria-hidden="true"></div>
