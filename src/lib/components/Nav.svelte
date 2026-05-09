@@ -1,6 +1,4 @@
 <script>
-  import { page } from '$app/stores';
-
   let mobileOpen = false;
   let leistungenOpen = false;
 
@@ -16,13 +14,6 @@
   function toggleReferenzen() { leistungenOpen = !leistungenOpen; }
   function closeAll() { leistungenOpen = false; mobileOpen = false; }
   function handleKeydown(e) { if (e.key === 'Escape') closeAll(); }
-
-  $: path = $page.url.pathname;
-
-  function isActive(href) {
-    if (href === '/') return path === '/';
-    return path === href || path.startsWith(href + '/');
-  }
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -39,16 +30,16 @@
     </a>
 
     <nav class="nav-desktop" aria-label="Hauptnavigation">
-      <a href="/" class="nav-link" class:nav-link--active={isActive('/')}>Home</a>
+      <a href="/" class="nav-link" data-sveltekit-preload-data>Home</a>
 
       <div class="nav-dropdown-wrap">
         <a
           class="nav-link nav-dropdown-trigger"
-          class:nav-link--active={isActive('/referenzen')}
           href="/referenzen"
           on:click|preventDefault={() => leistungenOpen = !leistungenOpen}
           aria-expanded={leistungenOpen}
           aria-haspopup="true"
+          data-sveltekit-preload-data
         >
           Referenzen
           <span class="material-symbols-outlined nav-chevron" class:rotated={leistungenOpen}>expand_more</span>
@@ -64,8 +55,8 @@
         {/if}
       </div>
 
-      <a href="/kontakt" class="nav-link" class:nav-link--active={isActive('/kontakt')}>Kontakt</a>
-      <a href="/ueber-uns" class="nav-link" class:nav-link--active={isActive('/ueber-uns')}>Über uns</a>
+      <a href="/kontakt" class="nav-link" data-sveltekit-preload-data>Kontakt</a>
+      <a href="/ueber-uns" class="nav-link" data-sveltekit-preload-data>Über uns</a>
     </nav>
 
     <div class="nav-actions">
@@ -108,9 +99,15 @@
   @media (max-width: 480px) { .nav-logo-img { height: 30px; } .nav-logo-text { font-size: 0.9rem; } .nav-logo { gap: 0.4rem; } }
   .nav-desktop { display: none; align-items: center; gap: 2rem; }
   @media (min-width: 768px) { .nav-desktop { display: flex; } }
-  .nav-link { font-family: var(--font-serif); font-size: 0.95rem; color: var(--color-on-surface-variant); text-decoration: none; background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.25rem; transition: color 0.2s ease; padding: 0; }
+  .nav-link { font-family: var(--font-serif); font-size: 0.95rem; color: var(--color-on-surface-variant); text-decoration: none; background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.25rem; padding: 0; }
   .nav-link:hover { color: var(--color-primary-container); }
-  .nav-link--active { color: var(--color-primary-container) !important; font-weight: 700; }
+
+  /* SvelteKit setzt aria-current="page" automatisch auf aktiven Links */
+  .nav-link[aria-current="page"] {
+    color: var(--color-primary-container) !important;
+    font-weight: 700;
+  }
+
   .nav-chevron { font-size: 18px !important; transition: transform 0.2s ease; }
   .nav-chevron.rotated { transform: rotate(180deg); }
   .nav-dropdown-wrap { position: relative; }
@@ -126,8 +123,9 @@
   .nav-hamburger:hover { background: var(--color-surface-container); }
   @media (min-width: 768px) { .nav-hamburger { display: none; } }
   .nav-mobile { display: flex; flex-direction: column; background: var(--color-surface-container-lowest); border-top: 1px solid var(--color-outline-variant); padding: 1rem var(--space-edge); gap: 0.25rem; }
-  .nav-mobile-link { display: flex; align-items: center; justify-content: space-between; font-family: var(--font-serif); font-size: 1rem; color: var(--color-on-surface-variant); padding: 0.75rem 0; border-bottom: 1px solid var(--color-outline-variant); text-decoration: none; background: none; border-left: none; border-right: none; border-top: none; cursor: pointer; width: 100%; text-align: left; transition: color 0.2s; }
+  .nav-mobile-link { display: flex; align-items: center; font-family: var(--font-serif); font-size: 1rem; color: var(--color-on-surface-variant); padding: 0.75rem 0; border-bottom: 1px solid var(--color-outline-variant); text-decoration: none; background: none; border-left: none; border-right: none; border-top: none; cursor: pointer; width: 100%; text-align: left; transition: color 0.2s; }
   .nav-mobile-link:hover { color: var(--color-primary-container); }
+  .nav-mobile-link[aria-current="page"] { color: var(--color-primary-container); font-weight: 700; }
   .nav-mobile-parent { font-weight: 500; flex: 1; }
   .nav-mobile-row { display: flex; align-items: center; }
   .nav-mobile-chevron-btn { background: none; border: none; cursor: pointer; padding: 0.5rem; color: var(--color-on-surface-variant); }
