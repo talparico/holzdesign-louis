@@ -2,11 +2,17 @@
   command = "npm run build"
   publish = "build"
 
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "http://holzdesign-louis.ch/*"
+  to = "https://www.holzdesign-louis.ch/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "https://holzdesign-louis.ch/*"
   to = "https://www.holzdesign-louis.ch/:splat"
   status = 301
   force = true
-
-[build.environment]
-  NODE_VERSION = "18"
