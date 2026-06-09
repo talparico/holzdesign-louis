@@ -1,1 +1,3 @@
-# Handled by netlify.toml
+# Redirect non-www to www
+http://holzdesign-louis.ch/*  https://www.holzdesign-louis.ch/:splat  301!
+https://holzdesign-louis.ch/* https://www.holzdesign-louis.ch/:splat  301!
